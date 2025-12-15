@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngành Ô Tô – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles riêng cho trang chi tiết ngành */
+        .sector-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .sector-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .sector-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .sector-header .breadcrumb {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .sector-header .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .sector-header .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .sector-section {
+            margin-bottom: 50px;
+            background: var(--white);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .sector-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-weight: 700;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .sector-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .sector-intro p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .sector-objectives ul,
+        .sector-outcomes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sector-objectives li,
+        .sector-outcomes li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .sector-objectives li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .sector-outcomes li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .outcome-group {
+            margin-bottom: 30px;
+        }
+
+        .outcome-group h3 {
+            color: var(--primary-blue);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .sector-curriculum {
+            overflow-x: auto;
+        }
+
+        .curriculum-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            margin-top: 20px;
+        }
+
+        .curriculum-table th,
+        .curriculum-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .curriculum-table th {
+            background: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .curriculum-table td {
+            color: var(--text-gray);
+        }
+
+        .curriculum-table td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .curriculum-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .curriculum-table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .sector-career ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sector-career li {
+            padding: 15px;
+            margin-bottom: 15px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .sector-admission {
+            background: var(--bg-light);
+        }
+
+        .admission-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .admission-item h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .admission-item p,
+        .admission-item ul {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .admission-item ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .admission-item li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .admission-item li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .sector-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .sector-section {
+                padding: 25px;
+            }
+
+            .admission-info {
+                grid-template-columns: 1fr;
+            }
+
+            .curriculum-table {
+                font-size: 0.9rem;
+            }
+
+            .curriculum-table th,
+            .curriculum-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="index.html#training">Ngành đào tạo</a></li>
+                    <li><a href="index.html#enrollment">Tuyển sinh</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="sector-page">
+        <div class="container">
+            <!-- Tiêu đề trang -->
+            <div class="sector-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Trang chủ</a> / <a href="index.html#training">Ngành đào tạo</a> / Ngành Ô Tô
+                </div>
+                <h1>Ngành Ô Tô – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+            </div>
+
+            <!-- Giới thiệu ngành -->
+            <section class="sector-section sector-intro">
+                <h2>Giới thiệu ngành</h2>
+                <p>
+                    Ngành Ô Tô là một trong những ngành nghề có nhu cầu nhân lực cao trong xã hội hiện đại. 
+                    Với sự phát triển mạnh mẽ của ngành công nghiệp ô tô và số lượng phương tiện ngày càng tăng, 
+                    nhu cầu về kỹ thuật viên sửa chữa và bảo dưỡng ô tô chuyên nghiệp đang rất lớn.
+                </p>
+                <p>
+                    Chương trình đào tạo ngành Ô Tô tại Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh trang bị cho học sinh 
+                    kiến thức và kỹ năng toàn diện về cấu tạo, nguyên lý hoạt động, phương pháp chẩn đoán, sửa chữa và 
+                    bảo dưỡng các hệ thống trên ô tô. Học sinh được thực hành trực tiếp trên các loại xe thực tế với 
+                    trang thiết bị hiện đại, đảm bảo có đủ năng lực làm việc ngay sau khi tốt nghiệp.
+                </p>
+                <h3>Đối tượng phù hợp</h3>
+                <p>
+                    Ngành Ô Tô phù hợp với những bạn trẻ yêu thích máy móc, kỹ thuật, có tư duy logic và khả năng tư duy 
+                    không gian tốt. Nếu bạn đam mê tìm hiểu về động cơ, hệ thống điện, hệ thống điều hòa và các công 
+                    nghệ hiện đại trên ô tô, đây chính là ngành học lý tưởng cho bạn. Ngành này cũng phù hợp với những 
+                    người muốn có một nghề nghiệp ổn định, thu nhập tốt và cơ hội phát triển nghề nghiệp rộng mở.
+                </p>
+            </section>
+
+            <!-- Mục tiêu đào tạo -->
+            <section class="sector-section sector-objectives">
+                <h2>Mục tiêu đào tạo</h2>
+                <ul>
+                    <li>
+                        Trang bị cho học sinh kiến thức cơ bản và chuyên sâu về cấu tạo, nguyên lý hoạt động của các 
+                        hệ thống trên ô tô bao gồm: động cơ, hệ thống truyền động, hệ thống điện, hệ thống điều hòa, 
+                        hệ thống phanh, hệ thống treo và hệ thống lái.
+                    </li>
+                    <li>
+                        Rèn luyện kỹ năng thực hành chẩn đoán, sửa chữa và bảo dưỡng các hư hỏng thường gặp trên ô tô 
+                        một cách chính xác, an toàn và hiệu quả.
+                    </li>
+                    <li>
+                        Phát triển khả năng sử dụng thành thạo các thiết bị, dụng cụ chuyên dụng trong nghề sửa chữa 
+                        ô tô như máy chẩn đoán, máy nén khí, các loại dụng cụ đo lường và thiết bị nâng hạ.
+                    </li>
+                    <li>
+                        Hình thành thái độ làm việc chuyên nghiệp, trách nhiệm, cẩn thận và tuân thủ các quy định về 
+                        an toàn lao động, bảo vệ môi trường trong quá trình làm việc.
+                    </li>
+                    <li>
+                        Nâng cao khả năng giao tiếp, làm việc nhóm và giải quyết vấn đề trong môi trường làm việc thực tế.
+                    </li>
+                    <li>
+                        Tạo nền tảng vững chắc để học sinh có thể tiếp tục học liên thông lên trình độ cao đẳng, 
+                        đại học hoặc tự phát triển nghề nghiệp trong tương lai.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Chuẩn đầu ra -->
+            <section class="sector-section sector-outcomes">
+                <h2>Chuẩn đầu ra</h2>
+                
+                <div class="outcome-group">
+                    <h3>Kiến thức</h3>
+                    <ul>
+                        <li>
+                            Hiểu rõ cấu tạo, nguyên lý hoạt động của động cơ đốt trong (xăng và diesel), các hệ thống 
+                            phụ trợ như hệ thống làm mát, hệ thống bôi trơn, hệ thống nhiên liệu.
+                        </li>
+                        <li>
+                            Nắm vững kiến thức về hệ thống truyền động gồm ly hợp, hộp số, cầu chủ động, hệ thống lái 
+                            và hệ thống phanh.
+                        </li>
+                        <li>
+                            Hiểu biết về hệ thống điện ô tô bao gồm ắc quy, máy phát điện, máy khởi động, hệ thống đèn, 
+                            hệ thống điều khiển điện tử và các cảm biến.
+                        </li>
+                        <li>
+                            Có kiến thức về hệ thống điều hòa không khí, hệ thống treo, hệ thống an toàn và các hệ 
+                            thống hỗ trợ lái xe hiện đại.
+                        </li>
+                        <li>
+                            Nắm được các phương pháp chẩn đoán, quy trình sửa chữa và bảo dưỡng định kỳ cho từng hệ thống.
+                        </li>
+                        <li>
+                            Hiểu biết về các quy định pháp luật, tiêu chuẩn kỹ thuật, an toàn lao động và bảo vệ môi trường 
+                            liên quan đến nghề sửa chữa ô tô.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="outcome-group">
+                    <h3>Kỹ năng</h3>
+                    <ul>
+                        <li>
+                            Thực hiện được các thao tác tháo lắp, kiểm tra, chẩn đoán và sửa chữa các hư hỏng của động cơ 
+                            và các hệ thống trên ô tô một cách chính xác, an toàn.
+                        </li>
+                        <li>
+                            Sử dụng thành thạo các thiết bị chẩn đoán điện tử, máy đo, dụng cụ chuyên dụng và các phần mềm 
+                            hỗ trợ trong quá trình sửa chữa.
+                        </li>
+                        <li>
+                            Đọc và hiểu được các tài liệu kỹ thuật, sơ đồ mạch điện, bản vẽ kỹ thuật và các thông số kỹ thuật 
+                            của xe.
+                        </li>
+                        <li>
+                            Thực hiện được công tác bảo dưỡng định kỳ, thay thế phụ tùng, điều chỉnh và hiệu chuẩn các hệ thống 
+                            theo đúng quy trình kỹ thuật.
+                        </li>
+                        <li>
+                            Có khả năng giao tiếp tốt với khách hàng, tư vấn và giải thích về tình trạng xe, phương án sửa chữa 
+                            và chi phí.
+                        </li>
+                        <li>
+                            Làm việc độc lập hoặc phối hợp trong nhóm, quản lý thời gian và tổ chức công việc hiệu quả.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="outcome-group">
+                    <h3>Thái độ</h3>
+                    <ul>
+                        <li>
+                            Có ý thức trách nhiệm cao trong công việc, đảm bảo chất lượng sửa chữa, an toàn cho người sử dụng 
+                            và bảo vệ môi trường.
+                        </li>
+                        <li>
+                            Tuân thủ nghiêm ngặt các quy định về an toàn lao động, sử dụng đúng thiết bị bảo hộ cá nhân và 
+                            thực hiện đúng quy trình kỹ thuật.
+                        </li>
+                        <li>
+                            Có tinh thần học hỏi, cập nhật kiến thức mới về công nghệ ô tô, không ngừng nâng cao trình độ 
+                            chuyên môn.
+                        </li>
+                        <li>
+                            Tôn trọng khách hàng, phục vụ tận tâm, trung thực trong công việc và giữ gìn uy tín nghề nghiệp.
+                        </li>
+                        <li>
+                            Có tinh thần hợp tác, đoàn kết với đồng nghiệp, sẵn sàng chia sẻ kinh nghiệm và hỗ trợ lẫn nhau.
+                        </li>
+                        <li>
+                            Rèn luyện tính cẩn thận, tỉ mỉ, kiên nhẫn trong công việc và có khả năng chịu đựng áp lực công việc.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Chương trình đào tạo -->
+            <section class="sector-section sector-curriculum">
+                <h2>Chương trình đào tạo</h2>
+                <p style="color: var(--text-gray); margin-bottom: 20px;">
+                    Chương trình đào tạo được thiết kế theo chuẩn của Bộ Lao động - Thương binh và Xã hội, 
+                    kết hợp giữa lý thuyết và thực hành với tỷ lệ 30% lý thuyết và 70% thực hành.
+                </p>
+                <div class="sector-curriculum">
+                    <table class="curriculum-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;">STT</th>
+                                <th style="width: 50%;">Tên mô đun/môn học</th>
+                                <th style="width: 15%;">Thời lượng (giờ)</th>
+                                <th style="width: 30%;">Ghi chú</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>An toàn lao động và vệ sinh công nghiệp</td>
+                                <td>30</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Vẽ kỹ thuật cơ khí</td>
+                                <td>45</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Vật liệu cơ khí</td>
+                                <td>30</td>
+                                <td>Lý thuyết</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Dung sai lắp ghép và đo lường kỹ thuật</td>
+                                <td>45</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Cơ kỹ thuật</td>
+                                <td>45</td>
+                                <td>Lý thuyết</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Điện kỹ thuật và điện tử cơ bản</td>
+                                <td>60</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Động cơ đốt trong</td>
+                                <td>120</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Hệ thống nhiên liệu động cơ xăng</td>
+                                <td>90</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Hệ thống nhiên liệu động cơ diesel</td>
+                                <td>75</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Hệ thống làm mát và bôi trơn</td>
+                                <td>60</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Hệ thống truyền động</td>
+                                <td>120</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Hệ thống phanh</td>
+                                <td>90</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Hệ thống lái và hệ thống treo</td>
+                                <td>90</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Hệ thống điện ô tô</td>
+                                <td>120</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Hệ thống điều hòa không khí</td>
+                                <td>90</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Chẩn đoán và sửa chữa điện tử ô tô</td>
+                                <td>105</td>
+                                <td>Lý thuyết + Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Bảo dưỡng và sửa chữa tổng hợp</td>
+                                <td>150</td>
+                                <td>Thực hành</td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>Thực tập tốt nghiệp</td>
+                                <td>300</td>
+                                <td>Thực hành tại doanh nghiệp</td>
+                            </tr>
+                            <tr style="background: var(--bg-light); font-weight: 600;">
+                                <td colspan="2" style="text-align: right; color: var(--primary-blue);">TỔNG CỘNG</td>
+                                <td style="text-align: center; color: var(--primary-blue);">1,626</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Cơ hội việc làm -->
+            <section class="sector-section sector-career">
+                <h2>Cơ hội việc làm</h2>
+                <p style="color: var(--text-gray); margin-bottom: 25px; line-height: 1.8;">
+                    Sau khi tốt nghiệp ngành Ô Tô, học sinh có thể làm việc tại nhiều vị trí khác nhau trong ngành 
+                    công nghiệp ô tô với mức thu nhập ổn định và cơ hội phát triển nghề nghiệp tốt.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Kỹ thuật viên sửa chữa ô tô:</strong> Làm việc tại các garage, trung tâm bảo hành, 
+                        đại lý ô tô, thực hiện các công việc chẩn đoán, sửa chữa và bảo dưỡng các hệ thống trên ô tô.
+                    </li>
+                    <li>
+                        <strong>Kỹ thuật viên chuyên về động cơ:</strong> Chuyên sâu về sửa chữa, bảo dưỡng động cơ, 
+                        hệ thống nhiên liệu, hệ thống làm mát và bôi trơn.
+                    </li>
+                    <li>
+                        <strong>Kỹ thuật viên chuyên về điện - điện tử ô tô:</strong> Chẩn đoán và sửa chữa các hệ thống 
+                        điện, điện tử, hệ thống điều khiển tự động trên ô tô hiện đại.
+                    </li>
+                    <li>
+                        <strong>Kỹ thuật viên chuyên về điều hòa:</strong> Lắp đặt, bảo dưỡng và sửa chữa hệ thống điều hòa 
+                        không khí trên ô tô.
+                    </li>
+                    <li>
+                        <strong>Kỹ thuật viên chuyên về hệ thống phanh và treo:</strong> Chuyên về sửa chữa, bảo dưỡng 
+                        hệ thống phanh, hệ thống treo và hệ thống lái.
+                    </li>
+                    <li>
+                        <strong>Nhân viên tư vấn kỹ thuật:</strong> Tư vấn cho khách hàng về tình trạng xe, phương án 
+                        sửa chữa và bảo dưỡng tại các garage, đại lý ô tô.
+                    </li>
+                    <li>
+                        <strong>Nhân viên kiểm định kỹ thuật:</strong> Làm việc tại các trung tâm đăng kiểm, kiểm tra 
+                        kỹ thuật và an toàn của phương tiện.
+                    </li>
+                    <li>
+                        <strong>Kỹ thuật viên tại các xưởng sản xuất phụ tùng:</strong> Làm việc trong các nhà máy sản 
+                        xuất, lắp ráp phụ tùng ô tô.
+                    </li>
+                    <li>
+                        <strong>Tự mở garage sửa chữa ô tô:</strong> Sau khi tích lũy đủ kinh nghiệm và vốn, có thể 
+                        tự mở garage riêng để kinh doanh dịch vụ sửa chữa và bảo dưỡng ô tô.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Thông tin tuyển sinh -->
+            <section class="sector-section sector-admission">
+                <h2>Thông tin tuyển sinh</h2>
+                <div class="admission-info">
+                    <div class="admission-item">
+                        <h3>Thời gian đào tạo</h3>
+                        <ul>
+                            <li><strong>Hệ Trung cấp:</strong> 2 năm (4 học kỳ)</li>
+                            <li><strong>Hệ vừa học vừa làm:</strong> 2,5 năm (5 học kỳ)</li>
+                            <li><strong>Thời gian học:</strong> Sáng, chiều hoặc tối (tùy chọn)</li>
+                            <li><strong>Khai giảng:</strong> Hàng năm vào tháng 9 và tháng 2</li>
+                        </ul>
+                    </div>
+                    <div class="admission-item">
+                        <h3>Điều kiện tuyển sinh</h3>
+                        <ul>
+                            <li>Tốt nghiệp THCS trở lên</li>
+                            <li>Độ tuổi từ 15 trở lên (không giới hạn độ tuổi trên)</li>
+                            <li>Có sức khỏe tốt, đủ điều kiện học tập</li>
+                            <li>Yêu thích nghề sửa chữa ô tô, có tư duy kỹ thuật</li>
+                            <li>Không yêu cầu thi đầu vào</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="admission-item" style="margin-top: 30px;">
+                    <h3>Hồ sơ đăng ký và nơi nộp</h3>
+                    <p style="margin-bottom: 15px;"><strong>Hồ sơ bao gồm:</strong></p>
+                    <ul>
+                        <li>Đơn đăng ký học (theo mẫu của trường)</li>
+                        <li>Bản sao bằng tốt nghiệp THCS/THPT (có công chứng)</li>
+                        <li>Bản sao học bạ (có công chứng)</li>
+                        <li>Giấy khai sinh (bản sao có công chứng)</li>
+                        <li>Ảnh 3x4 (4 tấm, chụp trong vòng 6 tháng)</li>
+                        <li>Giấy khám sức khỏe (theo mẫu của trường)</li>
+                        <li>Bản sao CMND/CCCD (nếu có)</li>
+                        <li>Giấy chứng nhận ưu tiên (nếu có)</li>
+                    </ul>
+                    <p style="margin-top: 20px;">
+                        <strong>Nơi nộp hồ sơ:</strong> Phòng Tuyển sinh - Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh<br>
+                        <strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh<br>
+                        <strong>Thời gian nhận hồ sơ:</strong> Từ thứ 2 đến thứ 6 (7:00 - 17:00), thứ 7 (7:00 - 12:00)
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                        <p><strong>Website:</strong> www.kyanh.edu.vn</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
