@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo tuyển sinh – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .enrollment-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .enrollment-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .school-info {
+            margin-bottom: 20px;
+        }
+
+        .school-info h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .school-info h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .school-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .document-title {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .document-title h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .document-title h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .document-title h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+
+        .enrollment-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-card);
+            line-height: 1.8;
+        }
+
+        .enrollment-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .enrollment-section {
+            margin-bottom: 35px;
+        }
+
+        .enrollment-section h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--cyan-primary);
+        }
+
+        .training-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .training-table th,
+        .training-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .training-table th {
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan-primary));
+            color: white;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .training-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .training-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .training-table .level-header {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            color: white;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .enrollment-content ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .enrollment-content li {
+            margin-bottom: 10px;
+        }
+
+        .enrollment-content strong {
+            color: var(--primary-blue);
+        }
+
+        .document-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .document-table th,
+        .document-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .document-table th {
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan-primary));
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            width: 50%;
+        }
+
+        .document-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .note-box {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-left: 4px solid #FF9800;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .note-box h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #FF6600;
+            margin-bottom: 15px;
+        }
+
+        .note-box ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border-left: 4px solid var(--primary-blue);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        .contact-info h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .enrollment-content {
+                padding: 25px 20px;
+            }
+
+            .training-table,
+            .document-table {
+                font-size: 0.9rem;
+            }
+
+            .training-table th,
+            .training-table td,
+            .document-table th,
+            .document-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#training">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="index.html#ky-tuc-xa">Ký túc xá</a></li>
+                            <li><a href="index.html#hoc-phi">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Enrollment Page Content -->
+    <section class="enrollment-page">
+        <div class="container">
+            <div class="enrollment-header">
+                <div class="school-info">
+                    <h1>DÒNG DON BOSCO VIỆT NAM</h1>
+                    <h2>TRƯỜNG TC KỸ THUẬT</h2>
+                    <h3>TƯ THỤC KỲ ANH</h3>
+                </div>
+                <div class="document-title">
+                    <h4>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h4>
+                    <h4>Độc lập – Tự do – Hạnh phúc</h4>
+                    <hr style="border: none; border-top: 2px solid #333; margin: 20px 0;">
+                    <h2>THÔNG BÁO TUYỂN SINH</h2>
+                    <h3>TRUNG CẤP KHÓA XVII - SƠ CẤP</h3>
+                    <h3>NĂM HỌC 2025-2026</h3>
+                </div>
+            </div>
+
+            <div class="enrollment-content">
+                <p>Trường Trung cấp Kỹ thuật tư thục Kỳ Anh (thuộc Dòng Don Bosco Việt Nam) thông báo tuyển sinh trình độ Trung cấp chính quy và Sơ cấp, năm học 2025 – 2026 như sau:</p>
+
+                <div class="enrollment-section">
+                    <h4>1. CÁC NGHỀ ĐÀO TẠO</h4>
+                    <table class="training-table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>NGHỀ ĐÀO TẠO</th>
+                                <th>Mã nghề</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-header">
+                                <td colspan="3">I. TRUNG CẤP</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Công nghệ ôtô</td>
+                                <td>5510216</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cắt gọt kim loại (tiện, phay, bào)</td>
+                                <td>5520121</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Hàn</td>
+                                <td>5520123</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>Điện công nghiệp</td>
+                                <td>5520227</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>May thời trang</td>
+                                <td>5540204</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>Chăm sóc sắc đẹp</td>
+                                <td>5810404</td>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td>Kế toán doanh nghiệp</td>
+                                <td>5340302</td>
+                            </tr>
+                            <tr class="level-header">
+                                <td colspan="3">II. SƠ CẤP</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Điện công nghiệp</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Điện dân dụng (thiết bị điện gia đình)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Điện tử công nghiệp</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>04</td>
+                                <td>Hàn điện</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>05</td>
+                                <td>Công nghệ hàn MIG-MAG (1G-3G)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>Cắt gọt kim loại</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>07</td>
+                                <td>Điện ôtô</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>08</td>
+                                <td>Sửa chữa, bảo trì xe gắn máy</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>09</td>
+                                <td>May công nghiệp</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>May dân dụng</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="enrollment-section">
+                    <h4>2. ĐỐI TƯỢNG TUYỂN SINH – THỜI GIAN ĐÀO TẠO</h4>
+                    <ul>
+                        <li><strong>Tốt nghiệp trung học cơ sở (hết lớp 9):</strong> thời gian đào tạo 2,5 năm, học đồng thời với chương trình văn hóa THPT (Hệ GDTX).</li>
+                    </ul>
+                </div>
+
+                <div class="enrollment-section">
+                    <h4>3. HÌNH THỨC TUYỂN SINH</h4>
+                    <p>Xét tuyển</p>
+                </div>
+
+                <div class="enrollment-section">
+                    <h4>4. QUYỀN LỢI CỦA NGƯỜI HỌC</h4>
+                    <ul>
+                        <li>Được Nhà nước hỗ trợ học phí cho học sinh tốt nghiệp trung học cơ sở học trung cấp nghề (Theo Nghị định số 81/2021/NĐ-CP).</li>
+                        <li>Được cấp bằng tốt nghiệp chính quy trung cấp hoặc sơ cấp.</li>
+                        <li>Được học liên thông lên bậc học cao hơn theo quy định của Nhà nước.</li>
+                        <li>Nhà trường giới thiệu việc làm tại các công ty, du học, xuất khẩu lao động uy tín.</li>
+                    </ul>
+                </div>
+
+                <div class="enrollment-section">
+                    <h4>5. HỒ SƠ TUYỂN SINH</h4>
+                    <table class="document-table">
+                        <thead>
+                            <tr>
+                                <th>Sơ cấp nghề</th>
+                                <th>Trung cấp nghề 2,5 năm (tốt nghiệp THCS)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <ol>
+                                        <li>2 sơ yếu lý lịch (có xác nhận của chính quyền địa phương)</li>
+                                        <li>2 bản photo CMND (có công chứng)</li>
+                                        <li>2 bản photo (hoặc bản sao) giấy khai sinh (có công chứng)</li>
+                                        <li>4 hình thẻ 3x4 (áo sơ mi trắng nền xanh)</li>
+                                        <li>Đơn xin học nghề (làm khi nộp hồ sơ)</li>
+                                    </ol>
+                                </td>
+                                <td>
+                                    <ol>
+                                        <li>Học bạ THCS bản chính và 1 bản sao (có công chứng)</li>
+                                        <li>Giấy chứng nhận tốt nghiệp tạm thời và 4 bản sao (có công chứng)</li>
+                                        <li>2 bản sao Giấy khai sinh (có dấu đỏ hoặc có công chứng)</li>
+                                        <li>2 sơ yếu lý lịch (có xác nhận của chính quyền địa phương)</li>
+                                        <li>4 bản sao CCCD (có công chứng)</li>
+                                        <li>4 hình thẻ 3x4 (áo sơ mi trắng nền xanh)</li>
+                                        <li>Đơn xin học nghề (theo mẫu)</li>
+                                        <li>Đơn xin vào lớp 10 (theo mẫu)</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="enrollment-section">
+                    <h4>6. HỒ SƠ LƯU XÁ (cho những người ở xa, có nhu cầu nội trú)</h4>
+                    <ul>
+                        <li>Đơn xin nhập lưu xá (theo mẫu, làm khi nộp hồ sơ)</li>
+                        <li>Giấy xác nhận giáo lý (nếu là học sinh Công giáo)</li>
+                        <li><strong>Tuần trải nghiệm lưu xá (cho học sinh mới):</strong> từ 14-21/7/2025</li>
+                    </ul>
+                </div>
+
+                <div class="note-box">
+                    <h5>LƯU Ý:</h5>
+                    <ul>
+                        <li><strong>Thời gian nhận đăng ký và nhận hồ sơ:</strong> từ ngày 01/05/2025 đến 30/06/2025</li>
+                        <li>Mọi chi tiết xin liên hệ trực tiếp với Văn phòng Trường.</li>
+                    </ul>
+                </div>
+
+                <div class="contact-info">
+                    <h5>THÔNG TIN LIÊN HỆ</h5>
+                    <p><strong>Địa chỉ:</strong> Trường Trung cấp Kỹ thuật Kỳ Anh, Ngõ 667 Lê Đại Hành, Tổ dân phố Hưng Bình, phường Hưng Trí, thị xã Kỳ Anh, Hà Tĩnh.</p>
+                    <p><strong>Di động/Zalo:</strong> 0965.995.135</p>
+                    <p><strong>Facebook:</strong> Don Bosco Kỳ Anh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

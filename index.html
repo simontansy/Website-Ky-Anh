@@ -7,11 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="index.html">
+                <a href='/'>
                     <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
                 </a>
                 <div class="logo-text">
@@ -21,12 +41,47 @@
             </div>
             <nav class="nav-menu">
                 <ul>
-                    <li><a href="#about">Giới thiệu</a></li>
-                    <li><a href="#training">Ngành đào tạo</a></li>
-                    <li><a href="#news">Tin tức</a></li>
-                    <li><a href="#enrollment">Tuyển sinh</a></li>
-                    <li><a href="#alumni">Cựu học sinh</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#training">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="index.html#ky-tuc-xa">Ký túc xá</a></li>
+                            <li><a href="index.html#hoc-phi">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle">
@@ -42,129 +97,91 @@
         <div class="hero-overlay">
             <div class="hero-content">
                 <h1>TRƯỜNG TRUNG CẤP KỸ THUẬT TƯ THỤC KỲ ANH</h1>
-                <p class="hero-slogan">Đào tạo nghề chất lượng cao - Xây dựng tương lai vững chắc</p>
+                <p class="hero-slogan-italic">Giáo Dục Bằng Con Tim - Phát triển toàn diện</p>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+
+    <!-- News Section -->
+    <section id="news" class="news">
         <div class="container">
-            <h2 class="section-title">Giới thiệu</h2>
-            
-            <!-- Mục 1: Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh -->
-            <div class="about-section">
-                <h3 class="subsection-title">Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
-                
-                <div class="about-subsection">
-                    <h4>Các Mốc Lịch Sử Thành Lập Và Phát Triển</h4>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-year">2000</div>
-                            <div class="timeline-content">
-                                <h5>Thành lập trường</h5>
-                                <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh được thành lập với sứ mệnh đào tạo nguồn nhân lực kỹ thuật chất lượng cao.</p>
-                            </div>
+            <div class="news-layout">
+                <!-- Cột bên trái: Tin tức & Sự kiện nổi bật -->
+                <div class="news-left-column">
+                    <h3 class="column-title">Tin tức & Sự kiện nổi bật</h3>
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="hinh_tot_nghiep.webp" alt="Lễ trao bằng tốt nghiệp 2024-2025" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2005</div>
-                            <div class="timeline-content">
-                                <h5>Mở rộng quy mô</h5>
-                                <p>Trường mở rộng cơ sở vật chất và tăng số lượng ngành đào tạo lên 10 ngành nghề.</p>
-                            </div>
+                        <div class="news-content">
+                            <span class="news-date">2024-2025</span>
+                            <h3>Lễ trao bằng tốt nghiệp 2024-2025</h3>
+                            <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh long trọng tổ chức lễ trao bằng tốt nghiệp cho các học sinh đã hoàn thành chương trình đào tạo. Đây là dịp vinh danh những thành tích học tập và rèn luyện của các em trong suốt quá trình học tập tại trường...</p>
+                            <a href="#" class="read-more">Đọc thêm →</a>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2010</div>
-                            <div class="timeline-content">
-                                <h5>Nâng cấp chất lượng</h5>
-                                <p>Đầu tư trang thiết bị hiện đại, nâng cao chất lượng đào tạo theo chuẩn quốc gia.</p>
-                            </div>
+                    </article>
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="sinh_nhat_thay_hieu_truong.webp" alt="Sinh nhật thầy hiệu trưởng" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-year">2020</div>
-                            <div class="timeline-content">
-                                <h5>Phát triển bền vững</h5>
-                                <p>Trường tiếp tục phát triển với nhiều chương trình hợp tác doanh nghiệp, đảm bảo việc làm cho học sinh sau tốt nghiệp.</p>
-                            </div>
+                        <div class="news-content">
+                            <span class="news-date">03/12/2025</span>
+                            <h3>Sinh nhật thầy hiệu trưởng</h3>
+                            <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh tổ chức lễ mừng sinh nhật thầy hiệu trưởng với sự tham gia đông đảo của toàn thể cán bộ, giáo viên và học sinh. Đây là dịp để thể hiện lòng biết ơn và tình cảm chân thành đối với người đứng đầu nhà trường, người đã có nhiều đóng góp cho sự phát triển của trường...</p>
+                            <a href="#" class="read-more">Đọc thêm →</a>
                         </div>
-                    </div>
+                    </article>
                 </div>
 
-                <div class="about-subsection">
-                    <h4>Sứ mạng - Triết lý Giáo Dục - Phương Pháp</h4>
-                    <div class="mission-content">
-                        <div class="mission-item">
-                            <h5>Sứ mạng</h5>
-                            <p>Đào tạo nguồn nhân lực kỹ thuật có trình độ chuyên môn cao, đạo đức nghề nghiệp tốt, đáp ứng nhu cầu phát triển kinh tế - xã hội của địa phương và cả nước. Trường cam kết cung cấp môi trường học tập chất lượng, trang bị cho học sinh kiến thức, kỹ năng thực hành và thái độ làm việc chuyên nghiệp.</p>
-                        </div>
-                        <div class="mission-item">
-                            <h5>Triết lý Giáo Dục</h5>
-                            <p>"Học đi đôi với hành - Lý thuyết gắn liền thực tiễn" - Trường tin rằng giáo dục nghề nghiệp phải gắn liền với thực hành, học sinh phải được trang bị đầy đủ kỹ năng thực tế để có thể làm việc ngay sau khi tốt nghiệp. Chúng tôi đề cao tính thực tiễn, sáng tạo và tinh thần trách nhiệm trong công việc.</p>
-                        </div>
-                        <div class="mission-item">
-                            <h5>Phương Pháp</h5>
-                            <p>Áp dụng phương pháp đào tạo hiện đại: 70% thực hành, 30% lý thuyết. Học sinh được học trực tiếp trên máy móc, thiết bị thực tế. Chương trình đào tạo được cập nhật thường xuyên theo nhu cầu thị trường lao động. Tổ chức các buổi thực tập tại doanh nghiệp, tạo cơ hội cho học sinh tiếp cận môi trường làm việc thực tế.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-subsection">
-                    <h4>Tầm Nhìn</h4>
-                    <p class="vision-text">Đến năm 2030, Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh trở thành một trong những cơ sở đào tạo nghề uy tín hàng đầu khu vực, được công nhận về chất lượng đào tạo và tỷ lệ học sinh có việc làm sau tốt nghiệp. Trường phấn đấu trở thành đối tác tin cậy của các doanh nghiệp trong việc cung cấp nguồn nhân lực chất lượng cao, góp phần phát triển kinh tế - xã hội của địa phương và cả nước.</p>
-                </div>
-            </div>
-
-            <!-- Mục 2: Cơ Cấu Tổ Chức -->
-            <div class="about-section">
-                <h3 class="subsection-title">Cơ Cấu Tổ Chức</h3>
-                
-                <div class="organization-content">
-                    <div class="org-section">
-                        <h4>Hội Đồng Trường</h4>
-                        <div class="org-grid">
-                            <div class="org-card">
-                                <div class="org-avatar">👤</div>
-                                <h5>Chủ tịch Hội Đồng Trường</h5>
-                                <p>Ông Nguyễn Văn A</p>
-                                <p class="org-role">Chịu trách nhiệm điều hành và định hướng phát triển của trường</p>
+                <!-- Cột bên phải: 3 hàng nhỏ -->
+                <div class="news-right-column">
+                    <!-- Hàng 1: Thông Báo -->
+                    <div class="news-right-row">
+                        <h3 class="row-title">Thông Báo</h3>
+                        <article class="news-card small">
+                            <div class="news-content">
+                                <span class="news-date">01/12/2025</span>
+                                <h3>Thông báo lịch thi học kì 1 và thi tốt nghiệp nghề</h3>
+                                <p>Thông báo lịch thi học kì 1 vào tuần 16-17 và lịch thi tốt nghiệp nghề vào tuần 21. Học sinh vui lòng theo dõi lịch thi và chuẩn bị tốt cho các kỳ thi...</p>
+                                <a href="#" class="read-more">Đọc thêm →</a>
                             </div>
-                            <div class="org-card">
-                                <div class="org-avatar">👤</div>
-                                <h5>Phó Chủ tịch</h5>
-                                <p>Bà Trần Thị B</p>
-                                <p class="org-role">Hỗ trợ Chủ tịch trong công tác quản lý và phát triển</p>
-                            </div>
-                            <div class="org-card">
-                                <div class="org-avatar">👤</div>
-                                <h5>Ủy viên</h5>
-                                <p>Ông Lê Văn C</p>
-                                <p class="org-role">Tham gia các quyết định quan trọng của trường</p>
-                            </div>
-                        </div>
+                        </article>
                     </div>
 
-                    <div class="org-section">
-                        <h4>Ban Giám Hiệu</h4>
-                        <div class="org-grid">
-                            <div class="org-card">
-                                <div class="org-avatar">👤</div>
-                                <h5>Hiệu trưởng</h5>
-                                <p>Thầy Phạm Văn D</p>
-                                <p class="org-role">Điều hành toàn bộ hoạt động của trường, chịu trách nhiệm trước Hội Đồng Trường</p>
+                    <!-- Hàng 2: Tin tức -->
+                    <div class="news-right-row">
+                        <h3 class="row-title">Tin tức</h3>
+                        <article class="news-card small">
+                            <div class="news-image-small">
+                                <img src="le_nha_giao_20_11.webp" alt="Lễ mừng ngày Nhà giáo Việt Nam 20/11" style="width: 100%; height: 100%; object-fit: cover;">
                             </div>
-                            <div class="org-card">
-                                <div class="org-avatar">👤</div>
-                                <h5>Phó Hiệu trưởng</h5>
-                                <p>Cô Hoàng Thị E</p>
-                                <p class="org-role">Phụ trách công tác đào tạo và quản lý học sinh</p>
+                            <div class="news-content">
+                                <span class="news-date">20/11/2025</span>
+                                <h3>Lễ mừng ngày Nhà giáo Việt Nam 20/11</h3>
+                                <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh long trọng tổ chức lễ kỷ niệm ngày Nhà giáo Việt Nam 20/11 với nhiều hoạt động ý nghĩa, tri ân các thầy cô giáo...</p>
+                                <a href="#" class="read-more">Đọc thêm →</a>
                             </div>
-                            <div class="org-card">
-                                <div class="org-avatar">👤</div>
-                                <h5>Phó Hiệu trưởng</h5>
-                                <p>Thầy Võ Văn F</p>
-                                <p class="org-role">Phụ trách cơ sở vật chất và hợp tác doanh nghiệp</p>
+                        </article>
+                    </div>
+
+                    <!-- Hàng 3: Thời khóa biểu -->
+                    <div class="news-right-row">
+                        <h3 class="row-title">Thời khóa biểu</h3>
+                        <article class="news-card small">
+                            <div class="news-image-small">
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; height: 100%;">
+                                    <img src="thoi_khoa_bieu_nghe_10_12.webp" alt="Thời khóa biểu nghề 10-12" style="width: 100%; height: 100%; object-fit: cover;">
+                                    <img src="thoi_khoa_bieu_nghe_11.webp" alt="Thời khóa biểu nghề 11" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
                             </div>
-                        </div>
+                            <div class="news-content">
+                                <span class="news-date">Tuần 15</span>
+                                <h3>Thời khóa biểu tuần 15</h3>
+                                <p>Thời khóa biểu học tập tuần 15 của các lớp, các ngành đào tạo. Xem chi tiết lịch học, lịch thi và các hoạt động ngoại khóa...</p>
+                                <a href="#" class="read-more">Xem thời khóa biểu →</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -172,119 +189,40 @@
     </section>
 
     <!-- Training Section -->
-    <section id="training" class="training">
+    <section id="training" class="training training-home">
         <div class="container">
-            <h2 class="section-title">Ngành Đào Tạo</h2>
+            <h2 class="section-title">Đào tạo</h2>
             
-            <!-- Trung Cấp -->
-            <div class="training-level">
-                <h3 class="level-title">Trung Cấp</h3>
-                <div class="programs-grid">
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">🚗</div>
-                        <h4>Ô tô</h4>
-                        <p>Đào tạo kỹ thuật viên sửa chữa và bảo dưỡng ô tô, trang bị kiến thức về động cơ, hệ thống điện, hệ thống điều hòa và các hệ thống khác trên ô tô.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">⚡</div>
-                        <h4>Điện Công Nghiệp</h4>
-                        <p>Chuyên về lắp đặt, vận hành, bảo trì hệ thống điện công nghiệp, tự động hóa, điều khiển và bảo vệ hệ thống điện.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">🔥</div>
-                        <h4>Hàn</h4>
-                        <p>Đào tạo kỹ thuật viên hàn chuyên nghiệp với các phương pháp hàn: hàn hồ quang, hàn khí, hàn TIG, hàn MIG/MAG.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">🔧</div>
-                        <h4>Cơ Khí</h4>
-                        <p>Kỹ thuật gia công cơ khí, vận hành máy tiện, phay, bào, mài và các thiết bị cơ khí công nghiệp.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">✂️</div>
-                        <h4>May Thời Trang</h4>
-                        <p>Thiết kế và may mặc thời trang, quản lý sản xuất may công nghiệp, kỹ thuật cắt may và hoàn thiện sản phẩm.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">💅</div>
-                        <h4>Chăm Sóc Sắc Đẹp</h4>
-                        <p>Kỹ thuật chăm sóc da, trang điểm, làm tóc, massage và các dịch vụ làm đẹp chuyên nghiệp.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">📊</div>
-                        <h4>Kế Toán Doanh Nghiệp</h4>
-                        <p>Kế toán tài chính, kế toán quản trị, thuế, báo cáo tài chính và sử dụng phần mềm kế toán chuyên nghiệp.</p>
-                    </a>
+            <div class="training-columns">
+                <!-- Cột Trung Cấp -->
+                <div class="training-column trung-cap-column">
+                    <h3 class="training-column-title">Trung Cấp</h3>
+                    <div class="training-list-wrapper">
+                        <ul class="training-list">
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">🚗</span> Ô tô</a></li>
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">⚡</span> Điện Công Nghiệp</a></li>
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">🔥</span> Hàn</a></li>
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">🔧</span> Cơ Khí</a></li>
+                        </ul>
+                        <ul class="training-list">
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">✂️</span> May Thời Trang</a></li>
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">💅</span> Chăm Sóc Sắc Đẹp</a></li>
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">📊</span> Kế Toán Doanh Nghiệp</a></li>
+                            <li><a href='/chi-tiet-nganh'><span class="training-icon">💅</span> Nail</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Sơ Cấp -->
-            <div class="training-level">
-                <h3 class="level-title">Sơ Cấp</h3>
-                <div class="programs-grid">
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">⚡</div>
-                        <h4>Điện Công Nghiệp</h4>
-                        <p>Chương trình đào tạo ngắn hạn về lắp đặt và sửa chữa điện công nghiệp cơ bản.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">🚗</div>
-                        <h4>Ô tô</h4>
-                        <p>Kỹ năng sửa chữa và bảo dưỡng ô tô cơ bản, phù hợp cho người mới bắt đầu.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">🔥</div>
-                        <h4>Hàn</h4>
-                        <p>Kỹ thuật hàn cơ bản, các phương pháp hàn thông dụng trong công nghiệp.</p>
-                    </a>
-                    <a href="chi-tiet-nganh.html" class="program-card">
-                        <div class="program-icon">💅</div>
-                        <h4>Nail</h4>
-                        <p>Kỹ thuật làm nail chuyên nghiệp, vẽ móng nghệ thuật và chăm sóc móng tay, móng chân.</p>
-                    </a>
+                <!-- Cột Sơ Cấp -->
+                <div class="training-column so-cap-column">
+                    <h3 class="training-column-title">Sơ Cấp</h3>
+                    <ul class="training-list">
+                        <li><a href='/chi-tiet-nganh'><span class="training-icon">⚡</span> Điện Công Nghiệp</a></li>
+                        <li><a href='/chi-tiet-nganh'><span class="training-icon">🔥</span> Hàn</a></li>
+                        <li><a href='/chi-tiet-nganh'><span class="training-icon">🚗</span> Ô tô</a></li>
+                        <li><a href='/chi-tiet-nganh'><span class="training-icon">💅</span> Nail</a></li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="news">
-        <div class="container">
-            <h2 class="section-title">Tin tức</h2>
-            <div class="news-grid">
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="image-placeholder-small">📰</div>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date">20/01/2024</span>
-                        <h3>Lễ khai giảng năm học mới 2024-2025</h3>
-                        <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh long trọng tổ chức lễ khai giảng năm học mới với sự tham gia của toàn thể cán bộ, giảng viên, học sinh và phụ huynh. Năm học mới hứa hẹn nhiều thành công và phát triển...</p>
-                        <a href="#" class="read-more">Đọc thêm →</a>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="image-placeholder-small">📰</div>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date">15/01/2024</span>
-                        <h3>Hội thảo định hướng nghề nghiệp cho học sinh</h3>
-                        <p>Trường tổ chức hội thảo định hướng nghề nghiệp với sự tham gia của các chuyên gia và đại diện doanh nghiệp. Chương trình giúp học sinh có cái nhìn rõ ràng về các ngành nghề và cơ hội việc làm trong tương lai...</p>
-                        <a href="#" class="read-more">Đọc thêm →</a>
-                    </div>
-                </article>
-                <article class="news-card">
-                    <div class="news-image">
-                        <div class="image-placeholder-small">📰</div>
-                    </div>
-                    <div class="news-content">
-                        <span class="news-date">10/01/2024</span>
-                        <h3>Thông báo tuyển sinh năm học 2024-2025</h3>
-                        <p>Trường thông báo bắt đầu nhận hồ sơ tuyển sinh cho năm học 2024-2025. Nhiều ưu đãi hấp dẫn dành cho học sinh đăng ký sớm: giảm học phí, hỗ trợ ký túc xá, cơ hội thực tập tại doanh nghiệp...</p>
-                        <a href="#" class="read-more">Đọc thêm →</a>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
@@ -294,116 +232,85 @@
         <div class="container">
             <h2 class="section-title">Tuyển sinh</h2>
             
-            <div class="enrollment-sections">
-                <!-- Trung Cấp Nghề + Trung Học Phổ Thông hệ GDTX -->
-                <div class="enrollment-section">
-                    <h3 class="enrollment-subtitle">Trung Cấp Nghề + Trung Học Phổ Thông hệ GDTX</h3>
-                    <div class="enrollment-details">
-                        <div class="detail-item">
-                            <h4>Chương trình đào tạo</h4>
-                            <p>Học sinh được học song song 2 chương trình:</p>
-                            <ul>
-                                <li><strong>Trung Cấp Nghề:</strong> Đào tạo chuyên môn nghề nghiệp với các ngành: Ô tô, Điện Công Nghiệp, Hàn, Cơ Khí, May Thời Trang, Chăm Sóc Sắc Đẹp, Kế Toán Doanh Nghiệp</li>
-                                <li><strong>Trung Học Phổ Thông hệ GDTX:</strong> Học chương trình văn hóa THPT theo hệ Giáo Dục Thường Xuyên</li>
-                            </ul>
-                            <p><strong>Lợi ích:</strong> Sau khi tốt nghiệp, học sinh có cả bằng Trung Cấp Nghề và bằng THPT, có thể học liên thông lên Cao đẳng, Đại học hoặc đi làm ngay.</p>
+            <div class="news-layout">
+                <!-- Cột bên trái: Thông tin tuyển sinh nổi bật -->
+                <div class="news-left-column">
+                    <a href="thong-tin-tuyen-sinh.html" style="text-decoration: none; display: block;">
+                        <h3 class="column-title">Thông tin tuyển sinh</h3>
+                    </a>
+                    <article class="news-card featured">
+                        <div class="news-image">
+                            <img src="truong_ky_anh.webp" alt="Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <div class="detail-item">
-                            <h4>Đối tượng tuyển sinh</h4>
-                            <ul>
-                                <li>Tốt nghiệp THCS trở lên</li>
-                                <li>Độ tuổi từ 15 trở lên</li>
-                                <li>Không giới hạn độ tuổi</li>
-                                <li>Có sức khỏe tốt, đủ điều kiện học tập</li>
-                            </ul>
+                        <div class="news-content">
+                            <span class="news-date">2025-2026</span>
+                            <h3>Trung Cấp Nghề + Trung Học Phổ Thông hệ GDTX</h3>
+                            <p>Học sinh được học song song 2 chương trình: Trung Cấp Nghề với các ngành Ô tô, Điện Công Nghiệp, Hàn, Cơ Khí, May Thời Trang, Chăm Sóc Sắc Đẹp, Kế Toán Doanh Nghiệp và chương trình văn hóa THPT theo hệ Giáo Dục Thường Xuyên. Sau khi tốt nghiệp, học sinh có cả bằng Trung Cấp Nghề và bằng THPT, có thể học liên thông lên Cao đẳng, Đại học hoặc đi làm ngay.</p>
+                            <p><strong>Đối tượng:</strong> Tốt nghiệp THCS trở lên, độ tuổi từ 15 trở lên, không giới hạn độ tuổi, có sức khỏe tốt.</p>
+                            <a href="thong-tin-tuyen-sinh.html" class="read-more">Xem chi tiết →</a>
                         </div>
-                        <div class="detail-item">
-                            <h4>Hồ sơ đăng ký</h4>
-                            <ul>
-                                <li>Đơn đăng ký học (theo mẫu của trường)</li>
-                                <li>Bản sao bằng tốt nghiệp THCS/THPT (có công chứng)</li>
-                                <li>Bản sao học bạ (có công chứng)</li>
-                                <li>Giấy khai sinh (bản sao có công chứng)</li>
-                                <li>Ảnh 3x4 (4 tấm, chụp trong vòng 6 tháng)</li>
-                                <li>Giấy khám sức khỏe (theo mẫu của trường)</li>
-                                <li>Bản sao CMND/CCCD (nếu có)</li>
-                            </ul>
+                    </article>
+                    <article id="ky-tuc-xa" class="news-card featured">
+                        <div class="news-image">
+                            <img src="hinh_truong_2.webp" alt="Ký túc xá" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                    </div>
+                        <div class="news-content">
+                            <span class="news-date">Dịch vụ</span>
+                            <h3>Ký Túc Xá cho Học Viên ở xa</h3>
+                            <p>Trường có ký túc xá khang trang, sạch sẽ dành cho học viên ở xa với đầy đủ tiện nghi: phòng ở rộng rãi, thoáng mát, có quạt, điện, nước đầy đủ, khu vệ sinh và nhà tắm chung, khu vực nấu ăn chung, khu vực giặt phơi riêng, bảo vệ 24/7, đảm bảo an ninh, gần trường, thuận tiện đi lại.</p>
+                            <a href="thong-tin-tuyen-sinh.html" class="read-more">Tìm hiểu thêm →</a>
+                        </div>
+                    </article>
                 </div>
 
-                <!-- Ký Túc Xá -->
-                <div class="enrollment-section">
-                    <h3 class="enrollment-subtitle">Ký Túc Xá cho Học Viên ở xa</h3>
-                    <div class="enrollment-details">
-                        <div class="detail-item">
-                            <h4>Thông tin ký túc xá</h4>
-                            <p>Trường có ký túc xá khang trang, sạch sẽ dành cho học viên ở xa với đầy đủ tiện nghi:</p>
-                            <ul>
-                                <li>Phòng ở rộng rãi, thoáng mát, có quạt, điện, nước đầy đủ</li>
-                                <li>Khu vệ sinh và nhà tắm chung, được vệ sinh thường xuyên</li>
-                                <li>Khu vực nấu ăn chung hoặc có thể ăn tại căng tin trường</li>
-                                <li>Khu vực giặt phơi riêng</li>
-                                <li>Bảo vệ 24/7, đảm bảo an ninh</li>
-                                <li>Gần trường, thuận tiện đi lại</li>
-                            </ul>
-                            <p><strong>Chi phí:</strong> Vui lòng liên hệ trực tiếp với trường để biết chi tiết về mức phí ký túc xá.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Học Phí -->
-                <div class="enrollment-section">
-                    <h3 class="enrollment-subtitle">Học Phí</h3>
-                    <div class="enrollment-details">
-                        <div class="detail-item">
-                            <h4>Mức học phí</h4>
-                            <p>Học phí được tính theo từng ngành và chương trình đào tạo. Trường có nhiều chính sách hỗ trợ học phí cho học sinh có hoàn cảnh khó khăn.</p>
-                            <div class="tuition-table">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Chương trình</th>
-                                            <th>Học phí (tham khảo)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Trung Cấp Nghề + THPT hệ GDTX</td>
-                                            <td>Liên hệ trường</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Trung Cấp Nghề</td>
-                                            <td>Liên hệ trường</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sơ Cấp</td>
-                                            <td>Liên hệ trường</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <!-- Cột bên phải: 3 hàng nhỏ -->
+                <div class="news-right-column">
+                    <!-- Hàng 1: Học Phí -->
+                    <div id="hoc-phi" class="news-right-row">
+                        <h3 class="row-title">Học Phí</h3>
+                        <article class="news-card small">
+                            <div class="news-image-small">
+                                <div class="image-placeholder-small">💰</div>
                             </div>
-                            <p><strong>Lưu ý:</strong> Học phí có thể thay đổi theo từng năm học. Vui lòng liên hệ trực tiếp để biết mức học phí chính xác và các chính sách ưu đãi.</p>
-                        </div>
+                            <div class="news-content">
+                                <span class="news-date">Năm học 2025-2026</span>
+                                <h3>Mức học phí</h3>
+                                <p>Học phí được tính theo từng ngành và chương trình đào tạo. Trường có nhiều chính sách hỗ trợ học phí cho học sinh có hoàn cảnh khó khăn. Vui lòng liên hệ trực tiếp để biết mức học phí chính xác và các chính sách ưu đãi.</p>
+                                <a href="thong-tin-tuyen-sinh.html" class="read-more">Liên hệ →</a>
+                            </div>
+                        </article>
                     </div>
-                </div>
 
-                <!-- Học Bổng -->
-                <div class="enrollment-section">
-                    <h3 class="enrollment-subtitle">Học Bổng</h3>
-                    <div class="enrollment-details">
-                        <div class="detail-item">
-                            <h4>Chính sách học bổng</h4>
-                            <p>Trường có nhiều chương trình học bổng và hỗ trợ tài chính cho học sinh:</p>
-                            <ul>
-                                <li><strong>Học bổng khuyến khích học tập:</strong> Dành cho học sinh có thành tích học tập xuất sắc</li>
-                                <li><strong>Học bổng cho học sinh có hoàn cảnh khó khăn:</strong> Hỗ trợ học phí và sinh hoạt phí</li>
-                                <li><strong>Học bổng cho học sinh đăng ký sớm:</strong> Giảm học phí cho học sinh đăng ký trước kỳ khai giảng</li>
-                                <li><strong>Học bổng cho học sinh giỏi nghề:</strong> Dành cho học sinh đạt giải trong các kỳ thi tay nghề</li>
-                                <li><strong>Hỗ trợ vay vốn học tập:</strong> Hỗ trợ học sinh vay vốn với lãi suất ưu đãi</li>
-                            </ul>
-                            <p><strong>Điều kiện và thủ tục:</strong> Vui lòng liên hệ trực tiếp với phòng Tuyển sinh để biết chi tiết về điều kiện và thủ tục xin học bổng.</p>
-                        </div>
+                    <!-- Hàng 2: Học Bổng -->
+                    <div id="hoc-bong" class="news-right-row">
+                        <h3 class="row-title">Học Bổng</h3>
+                        <article class="news-card small">
+                            <div class="news-image-small">
+                                <div class="image-placeholder-small">🎓</div>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">Hỗ trợ tài chính</span>
+                                <h3>Chính sách học bổng</h3>
+                                <p>Trường có nhiều chương trình học bổng: khuyến khích học tập, hỗ trợ học sinh có hoàn cảnh khó khăn, học bổng đăng ký sớm, học bổng giỏi nghề và hỗ trợ vay vốn học tập với lãi suất ưu đãi.</p>
+                                <a href="thong-tin-tuyen-sinh.html" class="read-more">Tìm hiểu thêm →</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Hàng 3: Hồ sơ đăng ký -->
+                    <div class="news-right-row">
+                        <h3 class="row-title">Hồ sơ đăng ký</h3>
+                        <article class="news-card small">
+                            <div class="news-image-small">
+                                <div class="image-placeholder-small">📋</div>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">Cần chuẩn bị</span>
+                                <h3>Danh sách hồ sơ</h3>
+                                <p>Đơn đăng ký học, bản sao bằng tốt nghiệp THCS/THPT, học bạ, giấy khai sinh, ảnh 3x4, giấy khám sức khỏe, bản sao CMND/CCCD. Tất cả bản sao cần có công chứng.</p>
+                                <a href="thong-tin-tuyen-sinh.html" class="read-more">Xem chi tiết →</a>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -498,7 +405,6 @@
                     <div class="alumni-content">
                         <div class="tradition-content">
                             <h4>Ngày truyền thống trường</h4>
-                            <p><strong>Ngày:</strong> [Ngày truyền thống của trường]</p>
                             <p>Ngày truyền thống là dịp để toàn thể cán bộ, giảng viên, học sinh và cựu học sinh cùng nhau ôn lại lịch sử phát triển của trường, tôn vinh những thành tích đã đạt được và hướng tới tương lai.</p>
                             <p>Trong ngày này, trường tổ chức nhiều hoạt động ý nghĩa:</p>
                             <ul>
@@ -623,6 +529,42 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Official Footer Block -->
+            <div class="official-footer">
+                <div class="official-footer-content">
+                    <div class="official-footer-section">
+                        <h4>Cơ quan chủ quản</h4>
+                        <p>Ủy ban nhân dân Thị xã Kỳ Anh, Tỉnh Hà Tĩnh</p>
+                        <p>Sở Lao động - Thương binh và Xã hội Tỉnh Hà Tĩnh</p>
+                    </div>
+                    
+                    <div class="official-footer-section">
+                        <h4>Chịu trách nhiệm nội dung</h4>
+                        <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</p>
+                    </div>
+                    
+                    <div class="official-footer-section">
+                        <h4>Quản trị website</h4>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                    </div>
+                    
+                    <div class="official-footer-section">
+                        <h4>Thông tin liên hệ</h4>
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+                
+                <div class="official-footer-links">
+                    <a href="#privacy-policy">Chính sách bảo mật</a>
+                    <span class="separator">|</span>
+                    <a href="#terms-of-use">Điều khoản sử dụng</a>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
             </div>

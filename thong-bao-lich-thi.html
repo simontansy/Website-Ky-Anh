@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo lịch thi – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .announcement-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .announcement-section {
+            margin-bottom: 50px;
+            background: var(--white);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .announcement-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .announcement-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .announcement-section p,
+        .announcement-section ul {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .announcement-section ul {
+            padding-left: 30px;
+        }
+
+        .announcement-section li {
+            margin-bottom: 10px;
+        }
+
+        .exam-schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .exam-schedule-table th,
+        .exam-schedule-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .exam-schedule-table th {
+            background: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .exam-schedule-table td {
+            color: var(--text-gray);
+        }
+
+        .exam-schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .exam-schedule-table tr:hover {
+            background: var(--bg-light);
+        }
+
+        .important-note {
+            background: var(--bg-cyan-light);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-blue);
+            margin-top: 20px;
+        }
+
+        .important-note h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        .important-note ul {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#training">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="index.html#ky-tuc-xa">Ký túc xá</a></li>
+                            <li><a href="index.html#hoc-phi">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="announcement-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Thông báo lịch thi</h1>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">Lịch thi học kỳ 1 và thi tốt nghiệp nghề năm học 2024-2025</p>
+            </div>
+
+            <!-- Lịch thi học kỳ 1 -->
+            <section class="announcement-section">
+                <h2>Lịch thi học kỳ 1</h2>
+                <p><strong>Thời gian:</strong> Tuần 16-17 (từ ngày [Ngày] đến ngày [Ngày])</p>
+                
+                <h3>Hình thức thi</h3>
+                <ul>
+                    <li><strong>Thi lý thuyết:</strong> Thi viết tại phòng thi</li>
+                    <li><strong>Thi thực hành:</strong> Thi tại xưởng thực hành</li>
+                    <li><strong>Thi văn hóa:</strong> Thi theo lịch của Sở Giáo dục và Đào tạo</li>
+                </ul>
+
+                <h3>Lịch thi chi tiết</h3>
+                <table class="exam-schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Ngày thi</th>
+                            <th>Môn thi</th>
+                            <th>Thời gian</th>
+                            <th>Hình thức</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Môn lý thuyết 1</td>
+                            <td>7:00 - 9:00</td>
+                            <td>Thi viết</td>
+                            <td>Tại phòng thi</td>
+                        </tr>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Môn thực hành 1</td>
+                            <td>7:00 - 11:00</td>
+                            <td>Thi thực hành</td>
+                            <td>Tại xưởng</td>
+                        </tr>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Môn lý thuyết 2</td>
+                            <td>7:00 - 9:00</td>
+                            <td>Thi viết</td>
+                            <td>Tại phòng thi</td>
+                        </tr>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Môn thực hành 2</td>
+                            <td>7:00 - 11:00</td>
+                            <td>Thi thực hành</td>
+                            <td>Tại xưởng</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="important-note">
+                    <h3>Lưu ý quan trọng</h3>
+                    <ul>
+                        <li>Học sinh có mặt tại phòng thi trước 15 phút</li>
+                        <li>Mang đầy đủ dụng cụ, tài liệu theo quy định</li>
+                        <li>Mặc đồng phục khi đi thi</li>
+                        <li>Không được mang điện thoại, tài liệu trái phép vào phòng thi</li>
+                        <li>Liên hệ phòng Đào tạo nếu có thắc mắc: 0965 665 134</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Lịch thi tốt nghiệp nghề -->
+            <section class="announcement-section">
+                <h2>Lịch thi tốt nghiệp nghề</h2>
+                <p><strong>Thời gian:</strong> Tuần 21 (từ ngày [Ngày] đến ngày [Ngày])</p>
+                
+                <h3>Điều kiện dự thi</h3>
+                <ul>
+                    <li>Hoàn thành đầy đủ các môn học trong chương trình đào tạo</li>
+                    <li>Đạt điểm trung bình các môn học từ 5.0 trở lên</li>
+                    <li>Không có môn học nào bị điểm 0</li>
+                    <li>Hoàn thành đầy đủ hồ sơ tốt nghiệp</li>
+                    <li>Nộp đầy đủ học phí và các khoản thu</li>
+                </ul>
+
+                <h3>Hình thức thi</h3>
+                <ul>
+                    <li><strong>Thi lý thuyết tổng hợp:</strong> Thi viết, bao gồm kiến thức tổng hợp của ngành</li>
+                    <li><strong>Thi thực hành tốt nghiệp:</strong> Thi thực hành tại xưởng, thực hiện bài thi theo đề bài</li>
+                    <li><strong>Bảo vệ đồ án/đề tài:</strong> (Nếu có) Bảo vệ trước hội đồng chấm thi</li>
+                </ul>
+
+                <h3>Lịch thi chi tiết</h3>
+                <table class="exam-schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Ngày thi</th>
+                            <th>Nội dung thi</th>
+                            <th>Thời gian</th>
+                            <th>Hình thức</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Thi lý thuyết tổng hợp</td>
+                            <td>7:00 - 10:00</td>
+                            <td>Thi viết</td>
+                            <td>Tại phòng thi</td>
+                        </tr>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Thi thực hành tốt nghiệp</td>
+                            <td>7:00 - 15:00</td>
+                            <td>Thi thực hành</td>
+                            <td>Tại xưởng</td>
+                        </tr>
+                        <tr>
+                            <td>[Ngày]</td>
+                            <td>Bảo vệ đồ án/đề tài</td>
+                            <td>7:00 - 17:00</td>
+                            <td>Bảo vệ</td>
+                            <td>Tại phòng họp</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="important-note">
+                    <h3>Lưu ý quan trọng</h3>
+                    <ul>
+                        <li>Học sinh cần chuẩn bị đầy đủ dụng cụ, thiết bị cho phần thi thực hành</li>
+                        <li>Đọc kỹ đề thi trước khi làm bài</li>
+                        <li>Tuân thủ nghiêm ngặt quy chế thi</li>
+                        <li>Thời gian thi thực hành có thể kéo dài, học sinh cần chuẩn bị sức khỏe tốt</li>
+                        <li>Liên hệ phòng Đào tạo để biết thêm chi tiết: 0965 665 134</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Thông tin liên hệ -->
+            <section class="announcement-section">
+                <h2>Thông tin liên hệ</h2>
+                <p>Mọi thắc mắc về lịch thi, quy chế thi, học sinh vui lòng liên hệ:</p>
+                <ul>
+                    <li><strong>Phòng Đào tạo:</strong> 0965 665 134</li>
+                    <li><strong>Email:</strong> ttdnka@yahoo.co.uk</li>
+                    <li><strong>Thời gian làm việc:</strong> Thứ 2 - Thứ 6: 7:00 - 17:00, Thứ 7: 7:00 - 12:00</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border-color);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Cơ quan chủ quản</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Ủy ban nhân dân Thị xã Kỳ Anh, Tỉnh Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Sở Lao động - Thương binh và Xã hội Tỉnh Hà Tĩnh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Chịu trách nhiệm nội dung</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Quản trị website</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Thông tin liên hệ</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 10px;">
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Chính sách bảo mật</a> | 
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Điều khoản sử dụng</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

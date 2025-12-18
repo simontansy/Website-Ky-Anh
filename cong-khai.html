@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công khai – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .disclosure-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .disclosure-section {
+            margin-bottom: 50px;
+            background: var(--white);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .disclosure-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .disclosure-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .disclosure-section p,
+        .disclosure-section ul {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .disclosure-section ul {
+            padding-left: 30px;
+        }
+
+        .disclosure-section li {
+            margin-bottom: 10px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-table th {
+            background: var(--primary-blue);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .info-table td {
+            color: var(--text-gray);
+        }
+
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .info-table tr:hover {
+            background: var(--bg-light);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#training">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="index.html#ky-tuc-xa">Ký túc xá</a></li>
+                            <li><a href="index.html#hoc-phi">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="disclosure-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Công khai thông tin</h1>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">Thông tin công khai về hoạt động đào tạo, tài chính và các hoạt động khác của trường</p>
+            </div>
+
+            <!-- Công khai về cơ sở vật chất -->
+            <section class="disclosure-section">
+                <h2>Công khai về cơ sở vật chất</h2>
+                <h3>Diện tích đất, diện tích sàn xây dựng</h3>
+                <p>Tổng diện tích đất: [Số] m²</p>
+                <p>Tổng diện tích sàn xây dựng: [Số] m²</p>
+                
+                <h3>Phòng học, phòng thực hành</h3>
+                <ul>
+                    <li>Số phòng học lý thuyết: [Số] phòng</li>
+                    <li>Số phòng thực hành: [Số] phòng</li>
+                    <li>Xưởng thực hành: [Số] xưởng</li>
+                </ul>
+
+                <h3>Thư viện, phòng máy tính</h3>
+                <ul>
+                    <li>Thư viện: [Số] phòng, [Số] đầu sách</li>
+                    <li>Phòng máy tính: [Số] phòng, [Số] máy tính</li>
+                </ul>
+            </section>
+
+            <!-- Công khai về đội ngũ -->
+            <section class="disclosure-section">
+                <h2>Công khai về đội ngũ cán bộ, giáo viên</h2>
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Chức danh</th>
+                            <th>Số lượng</th>
+                            <th>Trình độ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ban Giám hiệu</td>
+                            <td>[Số] người</td>
+                            <td>Đại học trở lên</td>
+                        </tr>
+                        <tr>
+                            <td>Giáo viên cơ hữu</td>
+                            <td>[Số] người</td>
+                            <td>Đại học trở lên</td>
+                        </tr>
+                        <tr>
+                            <td>Giáo viên thỉnh giảng</td>
+                            <td>[Số] người</td>
+                            <td>Đại học trở lên</td>
+                        </tr>
+                        <tr>
+                            <td>Cán bộ, nhân viên</td>
+                            <td>[Số] người</td>
+                            <td>Trung cấp trở lên</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Công khai về tài chính -->
+            <section class="disclosure-section">
+                <h2>Công khai về tài chính</h2>
+                <h3>Học phí và các khoản thu</h3>
+                <p>Học phí được công khai theo từng ngành đào tạo và được điều chỉnh theo quy định của Nhà nước.</p>
+                <p><strong>Lưu ý:</strong> Vui lòng liên hệ trực tiếp với phòng Tuyển sinh để biết mức học phí cụ thể cho từng ngành.</p>
+                
+                <h3>Chính sách miễn giảm học phí</h3>
+                <ul>
+                    <li>Miễn giảm học phí cho học sinh thuộc hộ nghèo, cận nghèo</li>
+                    <li>Miễn giảm học phí cho học sinh dân tộc thiểu số</li>
+                    <li>Học bổng khuyến khích học tập cho học sinh có thành tích xuất sắc</li>
+                    <li>Hỗ trợ vay vốn học tập với lãi suất ưu đãi</li>
+                </ul>
+            </section>
+
+            <!-- Công khai về chất lượng đào tạo -->
+            <section class="disclosure-section">
+                <h2>Công khai về chất lượng đào tạo</h2>
+                <h3>Kết quả đào tạo</h3>
+                <ul>
+                    <li>Tỷ lệ tốt nghiệp: [%]</li>
+                    <li>Tỷ lệ có việc làm sau tốt nghiệp: [%]</li>
+                    <li>Tỷ lệ học liên thông: [%]</li>
+                </ul>
+
+                <h3>Hoạt động đảm bảo chất lượng</h3>
+                <ul>
+                    <li>Đánh giá định kỳ chương trình đào tạo</li>
+                    <li>Khảo sát ý kiến học sinh về chất lượng đào tạo</li>
+                    <li>Khảo sát cựu học sinh về mức độ hài lòng</li>
+                    <li>Hợp tác với doanh nghiệp trong đào tạo và tuyển dụng</li>
+                </ul>
+            </section>
+
+            <!-- Công khai về tuyển sinh -->
+            <section class="disclosure-section">
+                <h2>Công khai về tuyển sinh</h2>
+                <h3>Chỉ tiêu tuyển sinh</h3>
+                <p>Chỉ tiêu tuyển sinh được công bố hàng năm theo quyết định của cơ quan có thẩm quyền.</p>
+                
+                <h3>Điều kiện tuyển sinh</h3>
+                <ul>
+                    <li>Tốt nghiệp THCS trở lên</li>
+                    <li>Độ tuổi từ 15 trở lên (không giới hạn độ tuổi trên)</li>
+                    <li>Có sức khỏe tốt, đủ điều kiện học tập</li>
+                    <li>Không yêu cầu thi đầu vào</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border-color);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Cơ quan chủ quản</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Ủy ban nhân dân Thị xã Kỳ Anh, Tỉnh Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Sở Lao động - Thương binh và Xã hội Tỉnh Hà Tĩnh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Chịu trách nhiệm nội dung</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Quản trị website</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Thông tin liên hệ</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 10px;">
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Chính sách bảo mật</a> | 
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Điều khoản sử dụng</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

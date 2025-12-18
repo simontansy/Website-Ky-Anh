@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Văn bản – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .document-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .document-section {
+            margin-bottom: 50px;
+        }
+
+        .document-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .document-item {
+            background: var(--white);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--primary-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .document-item:hover {
+            transform: translateX(5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .document-item h3 {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .document-item .doc-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .document-item .doc-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 20px;
+            background: var(--primary-blue);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .document-item .doc-link:hover {
+            background: var(--dark-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#training">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="index.html#ky-tuc-xa">Ký túc xá</a></li>
+                            <li><a href="index.html#hoc-phi">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="document-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Văn bản</h1>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">Các văn bản, quyết định, quy định của trường và các cơ quan quản lý</p>
+            </div>
+
+            <!-- Văn bản pháp quy -->
+            <section class="document-section">
+                <h2>Văn bản pháp quy</h2>
+                <ul class="document-list">
+                    <li class="document-item">
+                        <h3>Quyết định thành lập trường</h3>
+                        <div class="doc-meta">Số: [Số quyết định] | Ngày: [Ngày]</div>
+                        <p>Quyết định thành lập Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh của cơ quan có thẩm quyền.</p>
+                        <a href="#" class="doc-link">Tải xuống</a>
+                    </li>
+                    <li class="document-item">
+                        <h3>Quyết định công nhận trường đạt chuẩn</h3>
+                        <div class="doc-meta">Số: [Số quyết định] | Ngày: [Ngày]</div>
+                        <p>Quyết định công nhận trường đạt chuẩn chất lượng giáo dục nghề nghiệp.</p>
+                        <a href="#" class="doc-link">Tải xuống</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Quy định nội bộ -->
+            <section class="document-section">
+                <h2>Quy định nội bộ</h2>
+                <ul class="document-list">
+                    <li class="document-item">
+                        <h3>Nội quy học sinh</h3>
+                        <div class="doc-meta">Ban hành: [Ngày]</div>
+                        <p>Quy định về nội quy, kỷ luật và quyền lợi của học sinh trong trường.</p>
+                        <a href="noi_quy_2025_2026.doc" class="doc-link">Tải xuống</a>
+                    </li>
+                    <li class="document-item">
+                        <h3>Quy chế đào tạo</h3>
+                        <div class="doc-meta">Ban hành: [Ngày]</div>
+                        <p>Quy chế về tổ chức đào tạo, kiểm tra, thi và công nhận tốt nghiệp.</p>
+                        <a href="#" class="doc-link">Tải xuống</a>
+                    </li>
+                    <li class="document-item">
+                        <h3>Quy định về học phí và các khoản thu</h3>
+                        <div class="doc-meta">Ban hành: [Ngày]</div>
+                        <p>Quy định về mức học phí, các khoản thu và chính sách miễn giảm học phí.</p>
+                        <a href="quyet_dinh_hoc_phi_2025_2026.webp" class="doc-link">Xem</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Thông báo, quyết định -->
+            <section class="document-section">
+                <h2>Thông báo, quyết định</h2>
+                <ul class="document-list">
+                    <li class="document-item">
+                        <h3>Thông báo tuyển sinh khóa XVII</h3>
+                        <div class="doc-meta">Ngày: [Ngày]</div>
+                        <p>Thông báo về kế hoạch tuyển sinh, chỉ tiêu và thời gian nhận hồ sơ cho khóa học mới.</p>
+                        <a href="THONG_ BAO _TUYEN _SINH_ KHOA _XVII.docx" class="doc-link">Tải xuống</a>
+                    </li>
+                    <li class="document-item">
+                        <h3>Quyết định về lịch học và lịch thi</h3>
+                        <div class="doc-meta">Ngày: [Ngày]</div>
+                        <p>Quyết định về lịch học, lịch thi học kỳ và các hoạt động giáo dục trong năm học.</p>
+                        <a href="thong-bao-lich-thi.html" class="doc-link">Xem chi tiết</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-info" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border-color);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Cơ quan chủ quản</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Ủy ban nhân dân Thị xã Kỳ Anh, Tỉnh Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Sở Lao động - Thương binh và Xã hội Tỉnh Hà Tĩnh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Chịu trách nhiệm nội dung</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Quản trị website</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Thông tin liên hệ</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 10px;">
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Chính sách bảo mật</a> | 
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Điều khoản sử dụng</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

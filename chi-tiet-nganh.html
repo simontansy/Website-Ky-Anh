@@ -246,6 +246,26 @@
     </style>
 </head>
 <body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
     <!-- Header & Navigation -->
     <header class="header">
         <div class="container">
@@ -261,8 +281,46 @@
             <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="index.html#training">Ngành đào tạo</a></li>
-                    <li><a href="index.html#enrollment">Tuyển sinh</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#training">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="index.html#ky-tuc-xa">Ký túc xá</a></li>
+                            <li><a href="index.html#hoc-phi">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
                     <li><a href="index.html#contact">Liên hệ</a></li>
                 </ul>
             </nav>
@@ -280,7 +338,7 @@
             <!-- Tiêu đề trang -->
             <div class="sector-header">
                 <div class="breadcrumb">
-                    <a href="index.html">Trang chủ</a> / <a href="index.html#training">Ngành đào tạo</a> / Ngành Ô Tô
+                    <a href="index.html">Trang chủ</a> / <a href="index.html#training">Đào tạo</a> / Ngành Ô Tô
                 </div>
                 <h1>Ngành Ô Tô – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
             </div>
@@ -669,8 +727,37 @@
                         <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
                         <p><strong>Điện thoại:</strong> 0965 665 134</p>
                         <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
-                        <p><strong>Website:</strong> www.kyanh.edu.vn</p>
                     </div>
+                </div>
+            </div>
+            <div class="footer-info" style="margin-top: 30px; padding-top: 30px; border-top: 1px solid var(--border-color);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Cơ quan chủ quản</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Ủy ban nhân dân Thị xã Kỳ Anh, Tỉnh Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Sở Lao động - Thương binh và Xã hội Tỉnh Hà Tĩnh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Chịu trách nhiệm nội dung</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;">Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Quản trị website</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 15px; font-size: 1.1rem;">Thông tin liên hệ</h4>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Điện thoại:</strong> 0965 665 134</p>
+                        <p style="color: var(--text-gray); line-height: 1.8; font-size: 0.95rem;"><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+                <div style="text-align: center; padding-top: 20px; border-top: 1px solid var(--border-color);">
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 10px;">
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Chính sách bảo mật</a> | 
+                        <a href="#" style="color: var(--primary-blue); text-decoration: none; margin: 0 10px;">Điều khoản sử dụng</a>
+                    </p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -682,5 +769,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
