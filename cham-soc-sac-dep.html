@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chăm sóc sắc đẹp – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sector-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .sector-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .sector-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .sector-header .breadcrumb {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .sector-header .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .sector-header .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .sector-section {
+            margin-bottom: 50px;
+            background: var(--white);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .sector-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-weight: 700;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .sector-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .sector-intro p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .sector-objectives ul,
+        .sector-outcomes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sector-objectives li,
+        .sector-outcomes li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .sector-objectives li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .sector-outcomes li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--cyan-primary);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .doc-download {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-blue);
+            margin: 30px 0;
+        }
+
+        .doc-download h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .doc-download p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .doc-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan-primary));
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .doc-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .sector-header h1 {
+                font-size: 2rem;
+            }
+
+            .sector-section {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ke-hoach-dao-tao.html">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="ky-tuc-xa.html">Ký túc xá</a></li>
+                            <li><a href="hoc-phi.html">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sector Page Content -->
+    <section class="sector-page">
+        <div class="container">
+            <div class="sector-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Trang chủ</a> / <a href="cac-nganh-dao-tao.html">Các ngành đào tạo</a> / Chăm sóc sắc đẹp
+                </div>
+                <h1>💅 Chăm sóc sắc đẹp</h1>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">Ngành đào tạo chuyên sâu về chăm sóc da, làm đẹp và thẩm mỹ</p>
+            </div>
+
+            <!-- Giới thiệu ngành -->
+            <div class="sector-section sector-intro">
+                <h2>Giới thiệu ngành</h2>
+                <p>Ngành Chăm sóc sắc đẹp là một trong những ngành đào tạo năng động và có tiềm năng phát triển cao của Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. Chương trình đào tạo được xây dựng theo chuẩn quốc gia, trang bị cho học viên kiến thức và kỹ năng toàn diện về chăm sóc da, làm đẹp, trang điểm và các dịch vụ thẩm mỹ.</p>
+                <p>Với nhu cầu làm đẹp ngày càng cao trong xã hội hiện đại, ngành Chăm sóc sắc đẹp đang phát triển mạnh mẽ. Học viên tốt nghiệp ngành này có nhiều cơ hội việc làm tại các spa, thẩm mỹ viện, salon làm đẹp, các trung tâm chăm sóc sức khỏe và sắc đẹp, hoặc có thể tự mở cơ sở kinh doanh dịch vụ làm đẹp.</p>
+            </div>
+
+            <!-- Mục tiêu đào tạo -->
+            <div class="sector-section sector-objectives">
+                <h2>Mục tiêu đào tạo</h2>
+                <ul>
+                    <li>Trang bị kiến thức cơ bản và chuyên sâu về cấu trúc da, các loại da, các vấn đề về da</li>
+                    <li>Rèn luyện kỹ năng thực hành chăm sóc da mặt, chăm sóc da body, điều trị các vấn đề về da</li>
+                    <li>Phát triển khả năng trang điểm, tạo kiểu tóc, chăm sóc móng tay, móng chân</li>
+                    <li>Hình thành tác phong chuyên nghiệp, kỹ năng giao tiếp và tư vấn khách hàng</li>
+                    <li>Nâng cao khả năng sử dụng các thiết bị, mỹ phẩm và sản phẩm chăm sóc sắc đẹp</li>
+                    <li>Phát triển kỹ năng quản lý và kinh doanh trong lĩnh vực làm đẹp</li>
+                </ul>
+            </div>
+
+            <!-- Nội dung đào tạo -->
+            <div class="sector-section">
+                <h2>Nội dung chương trình đào tạo</h2>
+                
+                <h3>1. Kiến thức cơ bản</h3>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li>Giải phẫu và sinh lý da</li>
+                    <li>Hóa học mỹ phẩm</li>
+                    <li>Vệ sinh và an toàn trong làm đẹp</li>
+                    <li>Dịch tễ học và phòng chống bệnh</li>
+                    <li>Tâm lý khách hàng</li>
+                </ul>
+
+                <h3>2. Kiến thức chuyên ngành</h3>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li><strong>Chăm sóc da mặt:</strong> Phân tích da, các bước chăm sóc da, điều trị mụn, làm trắng da, chống lão hóa</li>
+                    <li><strong>Chăm sóc da body:</strong> Massage body, tẩy tế bào chết, dưỡng ẩm, giảm béo</li>
+                    <li><strong>Trang điểm:</strong> Trang điểm cơ bản, trang điểm chuyên nghiệp, trang điểm cô dâu</li>
+                    <li><strong>Chăm sóc móng:</strong> Chăm sóc móng tay, móng chân, sơn móng, vẽ móng nghệ thuật</li>
+                    <li><strong>Tạo kiểu tóc:</strong> Cắt tóc, uốn tóc, nhuộm tóc, tạo kiểu</li>
+                    <li><strong>Dịch vụ spa:</strong> Xông hơi, tắm bùn, chăm sóc toàn thân</li>
+                </ul>
+
+                <h3>3. Kỹ năng thực hành</h3>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li>Phân tích và đánh giá tình trạng da khách hàng</li>
+                    <li>Thực hiện các liệu trình chăm sóc da chuyên nghiệp</li>
+                    <li>Trang điểm cho các dịp khác nhau</li>
+                    <li>Chăm sóc và làm đẹp móng tay, móng chân</li>
+                    <li>Tư vấn và chăm sóc khách hàng</li>
+                    <li>Sử dụng các thiết bị làm đẹp hiện đại</li>
+                    <li>Thực tập tại các spa, thẩm mỹ viện</li>
+                </ul>
+            </div>
+
+            <!-- Cơ hội việc làm -->
+            <div class="sector-section sector-outcomes">
+                <h2>Cơ hội việc làm sau khi tốt nghiệp</h2>
+                <ul>
+                    <li>Chuyên viên chăm sóc da tại các spa, thẩm mỹ viện</li>
+                    <li>Chuyên viên trang điểm tại các studio, tiệm làm đẹp</li>
+                    <li>Thợ làm móng tại các salon nail, spa</li>
+                    <li>Nhân viên tư vấn và bán hàng mỹ phẩm</li>
+                    <li>Chuyên viên chăm sóc sắc đẹp tại các trung tâm thẩm mỹ</li>
+                    <li>Tự mở spa, thẩm mỹ viện, salon làm đẹp</li>
+                    <li>Học liên thông lên Cao đẳng, Đại học để nâng cao trình độ</li>
+                </ul>
+            </div>
+
+            <!-- Thời gian và hình thức đào tạo -->
+            <div class="sector-section">
+                <h2>Thời gian và hình thức đào tạo</h2>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li><strong>Hệ Trung cấp:</strong> 2,5 năm (đối với học sinh tốt nghiệp THCS)</li>
+                    <li>Học song song với chương trình văn hóa THPT (hệ GDTX)</li>
+                    <li>Tỷ lệ thực hành: 70% thực hành, 30% lý thuyết</li>
+                </ul>
+            </div>
+
+            <!-- Thông tin liên hệ -->
+            <div class="sector-section">
+                <h2>Thông tin liên hệ</h2>
+                <p>Để biết thêm chi tiết về ngành Chăm sóc sắc đẹp, vui lòng liên hệ:</p>
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <p><strong>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</strong></p>
+                    <p><strong>Địa chỉ:</strong> Ngõ 667 Lê Đại Hành, Tổ dân phố Hưng Bình, phường Hưng Trí, thị xã Kỳ Anh, Hà Tĩnh</p>
+                    <p><strong>Điện thoại:</strong> 0965.995.135</p>
+                    <p><strong>Email:</strong> truongtcktkyanh@gmail.com</p>
+                    <p><strong>Facebook:</strong> Don Bosco Kỳ Anh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 995 135</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

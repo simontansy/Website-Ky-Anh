@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ký túc xá cho học viên ở xa – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dormitory-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .dormitory-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .dormitory-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .dormitory-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-card);
+        }
+
+        .dormitory-info {
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .dormitory-info h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .dormitory-info h3 {
+            font-size: 1.4rem;
+            color: var(--primary-blue);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .dormitory-info p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .dormitory-info ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .dormitory-info li {
+            margin-bottom: 10px;
+        }
+
+        .application-form {
+            margin-top: 50px;
+            padding: 30px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            border: 2px solid var(--cyan-primary);
+        }
+
+        .application-form h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .siblings-list {
+            margin-top: 15px;
+        }
+
+        .sibling-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .sibling-item h4 {
+            margin-bottom: 10px;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+
+        .add-sibling-btn {
+            background: var(--cyan-primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .add-sibling-btn:hover {
+            background: var(--primary-blue);
+        }
+
+        .remove-sibling-btn {
+            background: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            float: right;
+        }
+
+        .remove-sibling-btn:hover {
+            background: #c82333;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan-primary));
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: block;
+            margin: 30px auto 0;
+            transition: transform 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .print-btn {
+            background: var(--yellow-primary);
+            color: var(--text-dark);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .print-btn:hover {
+            background: #f0c040;
+        }
+
+        .button-group {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .dormitory-content {
+                padding: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .dormitory-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ke-hoach-dao-tao.html">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="ky-tuc-xa.html">Ký túc xá</a></li>
+                            <li><a href="hoc-phi.html">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dormitory Page Content -->
+    <section class="dormitory-page">
+        <div class="container">
+            <div class="dormitory-header">
+                <h1>Ký Túc Xá cho Học Viên ở xa</h1>
+            </div>
+
+            <div class="dormitory-content">
+                <div class="dormitory-info">
+                    <h2>Giới thiệu về Ký Túc Xá</h2>
+                    <p>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh có ký túc xá khang trang, sạch sẽ dành cho học viên ở xa với đầy đủ tiện nghi:</p>
+                    <ul>
+                        <li>Phòng ở rộng rãi, thoáng mát, có quạt, điện, nước đầy đủ</li>
+                        <li>Khu vệ sinh và nhà tắm chung</li>
+                        <li>Khu vực nấu ăn chung</li>
+                        <li>Khu vực giặt phơi riêng</li>
+                        <li>Bảo vệ 24/7, đảm bảo an ninh</li>
+                        <li>Gần trường, thuận tiện đi lại</li>
+                    </ul>
+
+                    <h3>Quy định về Lưu Xá</h3>
+                    <p>Để được vào Lưu Xá, học viên cần:</p>
+                    <ul>
+                        <li>Điền đầy đủ đơn xin nhập lưu xá</li>
+                        <li>Nộp giấy xác nhận giáo lý (nếu là học sinh Công giáo)</li>
+                        <li>Tham gia tuần trải nghiệm lưu xá (cho học sinh mới): từ 14-21/7/2025</li>
+                        <li>Tuân thủ các nội quy và quy định của Lưu Xá</li>
+                    </ul>
+
+                    <h3>Thông tin liên hệ</h3>
+                    <p><strong>Địa chỉ:</strong> Trường Trung cấp Kỹ thuật Kỳ Anh, Ngõ 667 Lê Đại Hành, Tổ dân phố Hưng Bình, phường Hưng Trí, thị xã Kỳ Anh, Hà Tĩnh.</p>
+                    <p><strong>Di động/Zalo:</strong> 0965.995.135</p>
+                    <p><strong>Facebook:</strong> Don Bosco Kỳ Anh</p>
+                </div>
+
+                <div class="application-form">
+                    <h2>ĐƠN XIN GIA NHẬP LƯU XÁ</h2>
+                    <p style="text-align: center; margin-bottom: 20px;">
+                        <strong>Khóa:</strong> 2025 - 2028
+                    </p>
+                    <p style="text-align: center; margin-bottom: 30px;">
+                        <strong>Kính gửi:</strong> Cha Giám Đốc Cộng Thể Mục Cái Kỳ Anh<br>
+                        <strong>Cha Đặc Trách Lưu Xá</strong>
+                    </p>
+
+                    <form id="dormitoryForm">
+                        <div class="form-group">
+                            <label>Họ và Tên Học Viên: <span style="color: red;">*</span></label>
+                            <input type="text" name="studentName" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Điện Thoại: <span style="color: red;">*</span></label>
+                                <input type="tel" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Sinh ngày: <span style="color: red;">*</span></label>
+                                <input type="date" name="birthDate" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Họ Tên Cha: <span style="color: red;">*</span></label>
+                            <input type="text" name="fatherName" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nghề nghiệp (Cha):</label>
+                                <input type="text" name="fatherJob">
+                            </div>
+                            <div class="form-group">
+                                <label>Điện Thoại (Cha):</label>
+                                <input type="tel" name="fatherPhone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Họ Tên Mẹ: <span style="color: red;">*</span></label>
+                            <input type="text" name="motherName" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nghề nghiệp (Mẹ):</label>
+                                <input type="text" name="motherJob">
+                            </div>
+                            <div class="form-group">
+                                <label>Điện Thoại (Mẹ):</label>
+                                <input type="tel" name="motherPhone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Địa chỉ gia đình: <span style="color: red;">*</span></label>
+                            <textarea name="address" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anh chị em trong gia đình: (Họ tên / anh/chị/em)</label>
+                            <div class="siblings-list" id="siblingsList">
+                                <div class="sibling-item">
+                                    <h4>Anh/Chị/Em 1</h4>
+                                    <input type="text" name="sibling1" placeholder="Họ tên / anh/chị/em" style="width: 100%; margin-bottom: 10px;">
+                                </div>
+                            </div>
+                            <button type="button" class="add-sibling-btn" onclick="addSibling()">+ Thêm anh/chị/em</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Phần dành riêng cho học sinh Công giáo:</label>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Đã học xong lớp Giáo lý:</label>
+                                    <input type="text" name="catechismClass" placeholder="Ví dụ: Lớp 10">
+                                </div>
+                                <div class="form-group">
+                                    <label>Tại Giáo xứ:</label>
+                                    <input type="text" name="parish">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Giáo Phận:</label>
+                                <input type="text" name="diocese">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Lý do xin vào Lưu Xá: <span style="color: red;">*</span></label>
+                            <textarea name="reason" rows="4" required placeholder="Nêu rõ lý do xin vào Lưu Xá..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Cam kết:</label>
+                            <p style="background: #f0f0f0; padding: 15px; border-radius: 5px; margin-top: 10px;">
+                                Nay em viết đơn này kính mong Trường Trung Cấp Kỹ Thuật Tư Thục Don Bosco Kỳ Anh, xem xét cho em được vào ở Lưu Xá. Nếu được cấu xét, em xin cam kết sẽ thực hiện nghiêm túc các Nội Quy của Lưu Xá và chịu toàn bộ phần cấm của một người học viên nội trú. Em xin chân thành cảm ơn.
+                            </p>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" class="print-btn" onclick="window.print()">In đơn</button>
+                            <button type="submit" class="submit-btn">Gửi đơn</button>
+                        </div>
+
+                        <div style="margin-top: 40px; text-align: right;">
+                            <p><strong>Xác nhận của PHHS</strong></p>
+                            <p style="margin-top: 20px;">Học Viên Viết Đơn</p>
+                            <p style="margin-top: 40px;">(Ký và ghi rõ họ tên)</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 995 135</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let siblingCount = 1;
+
+        function addSibling() {
+            siblingCount++;
+            const siblingsList = document.getElementById('siblingsList');
+            const newSibling = document.createElement('div');
+            newSibling.className = 'sibling-item';
+            newSibling.innerHTML = `
+                <h4>Anh/Chị/Em ${siblingCount}</h4>
+                <button type="button" class="remove-sibling-btn" onclick="removeSibling(this)">Xóa</button>
+                <input type="text" name="sibling${siblingCount}" placeholder="Họ tên / anh/chị/em" style="width: 100%; margin-top: 10px;">
+            `;
+            siblingsList.appendChild(newSibling);
+        }
+
+        function removeSibling(button) {
+            if (siblingCount > 1) {
+                button.parentElement.remove();
+                siblingCount--;
+                // Renumber siblings
+                const siblings = document.querySelectorAll('.sibling-item');
+                siblings.forEach((sibling, index) => {
+                    sibling.querySelector('h4').textContent = `Anh/Chị/Em ${index + 1}`;
+                    const input = sibling.querySelector('input');
+                    if (input) {
+                        input.name = `sibling${index + 1}`;
+                    }
+                });
+            }
+        }
+
+        document.getElementById('dormitoryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Cảm ơn bạn đã gửi đơn! Vui lòng in đơn và nộp trực tiếp tại văn phòng trường hoặc liên hệ qua số điện thoại: 0965.995.135');
+        });
+    </script>
+</body>
+</html>
+

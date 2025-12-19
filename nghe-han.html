@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nghề Hàn – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sector-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .sector-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .sector-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .sector-header .breadcrumb {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        .sector-header .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .sector-header .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .sector-section {
+            margin-bottom: 50px;
+            background: var(--white);
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            border-left: 5px solid var(--primary-blue);
+        }
+
+        .sector-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-weight: 700;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-blue);
+        }
+
+        .sector-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+
+        .sector-intro p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .sector-objectives ul,
+        .sector-outcomes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sector-objectives li,
+        .sector-outcomes li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        .sector-objectives li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-blue);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .sector-outcomes li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--cyan-primary);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .doc-download {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-blue);
+            margin: 30px 0;
+        }
+
+        .doc-download h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .doc-download p {
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .doc-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan-primary));
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .doc-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .sector-header h1 {
+                font-size: 2rem;
+            }
+
+            .sector-section {
+                padding: 25px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ke-hoach-dao-tao.html">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="ky-tuc-xa.html">Ký túc xá</a></li>
+                            <li><a href="hoc-phi.html">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sector Page Content -->
+    <section class="sector-page">
+        <div class="container">
+            <div class="sector-header">
+                <div class="breadcrumb">
+                    <a href="index.html">Trang chủ</a> / <a href="cac-nganh-dao-tao.html">Các ngành đào tạo</a> / Nghề Hàn
+                </div>
+                <h1>🔥 Nghề Hàn</h1>
+                <p style="color: var(--text-gray); font-size: 1.1rem;">Ngành đào tạo chuyên sâu về công nghệ hàn, kỹ thuật hàn và ứng dụng trong sản xuất</p>
+            </div>
+
+            <!-- Giới thiệu ngành -->
+            <div class="sector-section sector-intro">
+                <h2>Giới thiệu ngành</h2>
+                <p>Nghề Hàn là một trong những ngành đào tạo quan trọng và có nhu cầu cao của Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. Chương trình đào tạo được xây dựng theo chuẩn quốc gia, trang bị cho học viên kiến thức và kỹ năng toàn diện về các phương pháp hàn, công nghệ hàn và ứng dụng trong sản xuất công nghiệp.</p>
+                <p>Với sự phát triển mạnh mẽ của ngành công nghiệp chế tạo, xây dựng và sửa chữa, nhu cầu nhân lực có tay nghề cao trong lĩnh vực hàn ngày càng tăng. Học viên tốt nghiệp nghề Hàn có nhiều cơ hội việc làm tại các nhà máy sản xuất, xưởng cơ khí, công trình xây dựng và các doanh nghiệp chế tạo kim loại.</p>
+            </div>
+
+            <!-- Mục tiêu đào tạo -->
+            <div class="sector-section sector-objectives">
+                <h2>Mục tiêu đào tạo</h2>
+                <ul>
+                    <li>Trang bị kiến thức cơ bản và chuyên sâu về các phương pháp hàn: hàn điện, hàn hơi, hàn MIG/MAG, hàn TIG</li>
+                    <li>Rèn luyện kỹ năng thực hành hàn các loại mối hàn: hàn góc, hàn giáp mối, hàn ống, hàn tấm</li>
+                    <li>Phát triển khả năng đọc bản vẽ kỹ thuật, tính toán chế độ hàn phù hợp</li>
+                    <li>Hình thành tác phong công nghiệp, ý thức an toàn lao động và bảo vệ môi trường</li>
+                    <li>Nâng cao khả năng sử dụng các thiết bị hàn, dụng cụ đo lường và kiểm tra chất lượng mối hàn</li>
+                    <li>Phát triển kỹ năng làm việc nhóm, giao tiếp và giải quyết vấn đề trong thực tế</li>
+                </ul>
+            </div>
+
+            <!-- Nội dung đào tạo -->
+            <div class="sector-section">
+                <h2>Nội dung chương trình đào tạo</h2>
+                
+                <h3>1. Kiến thức cơ bản</h3>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li>Vẽ kỹ thuật cơ khí</li>
+                    <li>Vật liệu hàn</li>
+                    <li>An toàn lao động và vệ sinh công nghiệp</li>
+                    <li>Điện kỹ thuật cơ bản</li>
+                    <li>Khí hàn và khí bảo vệ</li>
+                </ul>
+
+                <h3>2. Kiến thức chuyên ngành</h3>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li><strong>Hàn điện hồ quang tay (SMAW):</strong> Nguyên lý, kỹ thuật hàn, chế độ hàn, các loại que hàn</li>
+                    <li><strong>Hàn hơi (Oxy-Acetylene):</strong> Nguyên lý, kỹ thuật hàn, cắt kim loại bằng hơi</li>
+                    <li><strong>Hàn MIG/MAG:</strong> Hàn bán tự động bằng khí bảo vệ, kỹ thuật hàn, chế độ hàn</li>
+                    <li><strong>Hàn TIG:</strong> Hàn bằng điện cực không nóng chảy, kỹ thuật hàn, ứng dụng</li>
+                    <li><strong>Kiểm tra chất lượng mối hàn:</strong> Kiểm tra bằng mắt, siêu âm, từ tính, thẩm thấu</li>
+                    <li><strong>Khắc phục khuyết tật mối hàn:</strong> Nhận biết và sửa chữa các khuyết tật thường gặp</li>
+                </ul>
+
+                <h3>3. Kỹ năng thực hành</h3>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li>Đọc và hiểu bản vẽ kỹ thuật hàn</li>
+                    <li>Chuẩn bị vật liệu, thiết bị và dụng cụ hàn</li>
+                    <li>Hàn các mối hàn góc, giáp mối ở các vị trí khác nhau</li>
+                    <li>Hàn ống, hàn tấm theo bản vẽ</li>
+                    <li>Kiểm tra và đánh giá chất lượng mối hàn</li>
+                    <li>Bảo trì và sửa chữa thiết bị hàn</li>
+                    <li>Thực tập tại các xưởng, nhà máy</li>
+                </ul>
+            </div>
+
+            <!-- Cơ hội việc làm -->
+            <div class="sector-section sector-outcomes">
+                <h2>Cơ hội việc làm sau khi tốt nghiệp</h2>
+                <ul>
+                    <li>Thợ hàn tại các nhà máy sản xuất, xưởng cơ khí</li>
+                    <li>Thợ hàn tại các công trình xây dựng, cầu đường</li>
+                    <li>Kỹ thuật viên hàn tại các công ty chế tạo kim loại</li>
+                    <li>Nhân viên kiểm tra chất lượng mối hàn</li>
+                    <li>Thợ hàn tại các xưởng sửa chữa, bảo trì</li>
+                    <li>Tự mở xưởng hàn, cửa hàng dịch vụ hàn</li>
+                    <li>Học liên thông lên Cao đẳng, Đại học để nâng cao trình độ</li>
+                </ul>
+            </div>
+
+            <!-- Thời gian và hình thức đào tạo -->
+            <div class="sector-section">
+                <h2>Thời gian và hình thức đào tạo</h2>
+                <ul style="list-style: disc; margin-left: 30px; line-height: 1.8;">
+                    <li><strong>Hệ Trung cấp:</strong> 2,5 năm (đối với học sinh tốt nghiệp THCS)</li>
+                    <li><strong>Hệ Sơ cấp:</strong> Theo chương trình đào tạo sơ cấp</li>
+                    <li>Học song song với chương trình văn hóa THPT (hệ GDTX)</li>
+                    <li>Tỷ lệ thực hành: 70% thực hành, 30% lý thuyết</li>
+                </ul>
+            </div>
+
+            <!-- Tài liệu tham khảo -->
+            <div class="sector-section">
+                <h2>Tài liệu tham khảo</h2>
+                <div class="doc-download">
+                    <h4>📄 Chương trình đào tạo Nghề Hàn</h4>
+                    <p>File Word chi tiết về chương trình đào tạo, nội dung các môn học, thời gian đào tạo và yêu cầu tốt nghiệp.</p>
+                    <a href="Nghe han.doc" class="doc-link" target="_blank">Tải xuống file Word</a>
+                </div>
+            </div>
+
+            <!-- Thông tin liên hệ -->
+            <div class="sector-section">
+                <h2>Thông tin liên hệ</h2>
+                <p>Để biết thêm chi tiết về nghề Hàn, vui lòng liên hệ:</p>
+                <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <p><strong>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</strong></p>
+                    <p><strong>Địa chỉ:</strong> Ngõ 667 Lê Đại Hành, Tổ dân phố Hưng Bình, phường Hưng Trí, thị xã Kỳ Anh, Hà Tĩnh</p>
+                    <p><strong>Điện thoại:</strong> 0965.995.135</p>
+                    <p><strong>Email:</strong> truongtcktkyanh@gmail.com</p>
+                    <p><strong>Facebook:</strong> Don Bosco Kỳ Anh</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 995 135</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học phí năm học 2025-2026 – Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tuition-page {
+            padding-top: 40px;
+            padding-bottom: 60px;
+        }
+
+        .tuition-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid var(--primary-blue);
+        }
+
+        .school-info {
+            margin-bottom: 20px;
+        }
+
+        .school-info h1 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .school-info h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+
+        .school-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .document-title {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .document-title h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .document-title h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .document-info {
+            text-align: right;
+            margin: 20px 0;
+        }
+
+        .document-info p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+
+        .tuition-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-card);
+            line-height: 1.8;
+        }
+
+        .tuition-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .tuition-section {
+            margin-bottom: 40px;
+        }
+
+        .tuition-section h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--cyan-primary);
+        }
+
+        .basis-list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .basis-list li {
+            margin-bottom: 8px;
+        }
+
+        .decision-article {
+            margin: 20px 0;
+        }
+
+        .decision-article h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+
+        .tuition-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+        }
+
+        .tuition-table th,
+        .tuition-table td {
+            border: 1px solid #ddd;
+            padding: 12px 8px;
+            text-align: left;
+        }
+
+        .tuition-table th {
+            background: linear-gradient(135deg, var(--primary-blue), var(--cyan-primary));
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .tuition-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .tuition-table tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .tuition-table .level-header {
+            background: linear-gradient(135deg, #4CAF50, #66BB6A);
+            color: white;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .tuition-table .number-col {
+            text-align: center;
+            width: 5%;
+        }
+
+        .tuition-table .major-col {
+            width: 35%;
+        }
+
+        .tuition-table .semester-col {
+            text-align: right;
+            width: 20%;
+        }
+
+        .tuition-table .credit-col {
+            text-align: right;
+            width: 20%;
+        }
+
+        .tuition-table .date-col {
+            text-align: center;
+            width: 20%;
+        }
+
+        .recipients-list {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        .recipients-list li {
+            margin-bottom: 8px;
+        }
+
+        .signature-section {
+            text-align: right;
+            margin-top: 40px;
+        }
+
+        .signature-section p {
+            margin: 5px 0;
+        }
+
+        .signature-name {
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .tuition-content {
+                padding: 25px 15px;
+            }
+
+            .tuition-table {
+                font-size: 0.8rem;
+            }
+
+            .tuition-table th,
+            .tuition-table td {
+                padding: 8px 5px;
+            }
+
+            .tuition-table .number-col,
+            .tuition-table .semester-col,
+            .tuition-table .credit-col,
+            .tuition-table .date-col {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar">
+        <div class="container">
+            <div class="top-contact-content">
+                <span class="top-contact-item">
+                    <span class="contact-icon">📞</span>
+                    <a href="tel:0965995135">0965995135</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <a href="mailto:truongtcktkyanh@gmail.com">truongtcktkyanh@gmail.com</a>
+                </span>
+                <span class="top-contact-item">
+                    <span class="facebook-icon">f</span>
+                    <a href="https://facebook.com/donboscokyanh" target="_blank" rel="noopener noreferrer">donboscokyanh</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo_truong_ky_anh.webp" alt="Logo Trường Trung cấp Kỹ thuật Tư thục Kỳ Anh" class="site-logo">
+                </a>
+                <div class="logo-text">
+                    <h1>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h1>
+                    <p class="logo-subtitle">DON BOSCO</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="nav-dropdown">
+                        <a href="gioi-thieu.html">Giới thiệu</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="gioi-thieu.html#gioi-thieu-chung">Giới thiệu chung</a></li>
+                            <li><a href="gioi-thieu.html#cac-moc-lich-su">Các mốc lịch sử thành lập và phát triển</a></li>
+                            <li><a href="gioi-thieu.html#tam-nhin-su-mang">Tầm nhìn và sứ mệnh</a></li>
+                            <li><a href="gioi-thieu.html#gia-tri-cot-loi-phuong-phap">Các giá trị cốt lõi - Phương pháp giáo dục Salêdiêng: Hệ thống giáo dục dự phòng Gioan Bosco</a></li>
+                            <li><a href="gioi-thieu.html#co-cau-to-chuc">Cơ cấu tổ chức</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#training">Đào tạo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="ke-hoach-dao-tao.html">Kế hoạch đào tạo</a></li>
+                            <li><a href="index.html#training">Chương trình đào tạo</a></li>
+                            <li><a href="cac-nganh-dao-tao.html">Các ngành nghề đào tạo</a></li>
+                            <li><a href="thoi-khoa-bieu.html">Thời khóa biểu</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#news">Tin tức</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#news">Tin tức</a></li>
+                            <li><a href="index.html#news">Sự kiện</a></li>
+                            <li><a href="thong-bao-lich-thi.html">Thông báo lịch thi</a></li>
+                            <li><a href="index.html#news">Các sinh hoạt lưu xá</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="index.html#enrollment">Tuyển sinh</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="thong-tin-tuyen-sinh.html">Thông tin tuyển sinh</a></li>
+                            <li><a href="ky-tuc-xa.html">Ký túc xá</a></li>
+                            <li><a href="hoc-phi.html">Học phí</a></li>
+                            <li><a href="index.html#hoc-bong">Học bổng</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#alumni">Cựu học sinh</a></li>
+                    <li><a href="van-ban.html">Văn bản</a></li>
+                    <li><a href="cong-khai.html">Công khai</a></li>
+                    <li><a href="index.html#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tuition Page Content -->
+    <section class="tuition-page">
+        <div class="container">
+            <div class="tuition-header">
+                <div class="school-info">
+                    <h1>DÒNG DON BOSCO VIỆT NAM</h1>
+                    <h2>TRƯỜNG TC KỸ THUẬT</h2>
+                    <h3>TƯ THỤC KỲ ANH</h3>
+                </div>
+                <div class="document-title">
+                    <h4>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h4>
+                    <h4>Độc lập – Tự do – Hạnh phúc</h4>
+                    <hr style="border: none; border-top: 2px solid #333; margin: 20px 0;">
+                    <h2>QUYẾT ĐỊNH</h2>
+                </div>
+                <div class="document-info">
+                    <p><strong>Số:</strong> /QĐ-TCKTTT</p>
+                    <p><strong>Sông Trí, ngày 15 tháng 09 năm 2025</strong></p>
+                </div>
+            </div>
+
+            <div class="tuition-content">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 15px;">
+                        V/v ban hành mức thu học phí bọc nghề trình độ trung cấp, sơ cấp và văn hoá chương trình Giáo dục thường xuyên (GDTX) cấp trung học phổ thông (THPT) năm học 2025 - 2026
+                    </h3>
+                    <p style="font-weight: 700; margin-bottom: 20px;">HIỆU TRƯỞNG TRƯỜNG TRUNG CẤP KỸ THUẬT TƯ THỤC KỲ ANH</p>
+                </div>
+
+                <div class="tuition-section">
+                    <h4>Căn cứ:</h4>
+                    <ul class="basis-list">
+                        <li>Nghị định 238/2025/NĐ-CP ngày ... tháng ... năm 2025 của Chính phủ về chính sách học phí đối với cơ sở giáo dục nghề nghiệp;</li>
+                        <li>Quyết định số 778/QĐ-UBND ngày 05 tháng 4 năm 2023 của Ủy ban nhân dân tỉnh Hà Tĩnh về việc thành lập Trường Trung cấp Kỹ thuật tư thục Kỳ Anh;</li>
+                        <li>Quyết định số 2304.03.QĐLT/GT-SDBVN ngày 10 tháng 4 năm 2013 của Dòng Don Bosco Việt Nam về việc thành lập Trường Trung cấp Kỹ thuật tư thục Kỳ Anh;</li>
+                        <li>Quy chế tổ chức và hoạt động của Trường;</li>
+                        <li>Tình hình thực tế của Trường năm học 2025-2026.</li>
+                    </ul>
+                </div>
+
+                <div class="tuition-section">
+                    <h4>QUYẾT ĐỊNH:</h4>
+                    
+                    <div class="decision-article">
+                        <h5>Điều 1.</h5>
+                        <p>Ban hành kèm theo Quyết định này mức thu học phí bọc nghề trình độ trung cấp, sơ cấp và văn hoá chương trình Giáo dục thường xuyên (GDTX) cấp trung học phổ thông (THPT) năm học 2025 - 2026 theo Phụ lục đính kèm.</p>
+                    </div>
+
+                    <div class="decision-article">
+                        <h5>Điều 2.</h5>
+                        <p>Mức thu học phí ban hành kèm theo Quyết định này có hiệu lực áp dụng cho năm học 2025-2026 và thay thế các quy định về mức thu học phí trước đó.</p>
+                    </div>
+
+                    <div class="decision-article">
+                        <h5>Điều 3.</h5>
+                        <p>Quyết định này có hiệu lực kể từ ngày ký.</p>
+                    </div>
+                </div>
+
+                <div class="tuition-section">
+                    <h4>PHỤ LỤC 1: QUY ĐỊNH VỀ MỨC THU HỌC PHÍ HỆ TRUNG CẤP, SƠ CẤP NGHỀ VÀ HỌC VĂN HÓA CHƯƠNG TRÌNH GDTX CẤP THPT NĂM HỌC 2025-2026</h4>
+                    
+                    <table class="tuition-table">
+                        <thead>
+                            <tr>
+                                <th class="number-col">TT</th>
+                                <th class="major-col">HỆ/NGÀNH ĐÀO TẠO</th>
+                                <th class="semester-col">MỨC HỌC PHÍ THEO HỌC KỲ<br>(đồng/học kỳ)</th>
+                                <th class="credit-col">MỨC HỌC PHÍ THEO TC<br>(đồng/tín chỉ)</th>
+                                <th class="date-col">THỜI ĐIỂM ÁP DỤNG</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-header">
+                                <td colspan="5">I. TRUNG CẤP</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">1</td>
+                                <td class="major-col">Công nghệ Hàn</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">2</td>
+                                <td class="major-col">Công nghệ Ô tô</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">3</td>
+                                <td class="major-col">Cắt gọt kim loại</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">4</td>
+                                <td class="major-col">Điện công nghiệp</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">5</td>
+                                <td class="major-col">May thời trang</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">6</td>
+                                <td class="major-col">Kế toán doanh nghiệp</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">7</td>
+                                <td class="major-col">Chăm sóc sắc đẹp</td>
+                                <td class="semester-col">4.500.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr class="level-header">
+                                <td colspan="5">II. SƠ CẤP</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">1</td>
+                                <td class="major-col">Công nghệ Hàn</td>
+                                <td class="semester-col">-</td>
+                                <td class="credit-col">650.000</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">2</td>
+                                <td class="major-col">Công nghệ Ô tô</td>
+                                <td class="semester-col">-</td>
+                                <td class="credit-col">600.000</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">3</td>
+                                <td class="major-col">Cắt gọt kim loại</td>
+                                <td class="semester-col">-</td>
+                                <td class="credit-col">600.000</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">4</td>
+                                <td class="major-col">Điện công nghiệp</td>
+                                <td class="semester-col">-</td>
+                                <td class="credit-col">600.000</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">5</td>
+                                <td class="major-col">May thời trang</td>
+                                <td class="semester-col">-</td>
+                                <td class="credit-col">500.000</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr class="level-header">
+                                <td colspan="5">III. Văn hoá</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">1</td>
+                                <td class="major-col">Học phí</td>
+                                <td class="semester-col">1.750.000</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">2</td>
+                                <td class="major-col">Phí cơ sở vật chất</td>
+                                <td class="semester-col">600.000/năm</td>
+                                <td class="credit-col">-</td>
+                                <td class="date-col">Từ năm học 2025-2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tuition-section">
+                    <h4>PHỤ LỤC 2: QUY ĐỊNH VỀ MỨC THU CÁC KHOẢN PHÍ, LỆ PHÍ NĂM HỌC 2025 - 2026</h4>
+                    
+                    <table class="tuition-table">
+                        <thead>
+                            <tr>
+                                <th class="number-col">TT</th>
+                                <th class="major-col">HỆ/BẬC ĐÀO TẠO</th>
+                                <th colspan="2" style="text-align: center;">MỨC THU</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-header">
+                                <td colspan="4">I. LỆ PHÍ</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col" rowspan="7">1</td>
+                                <td class="major-col" rowspan="7">Hệ trung cấp</td>
+                                <td class="major-col">Lệ phí tuyển sinh hệ trung cấp</td>
+                                <td class="semester-col">60.000 đồng/hồ sơ</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi lại môn học/môđun</td>
+                                <td class="semester-col">100.000 đồng/môn học-môđun</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí học lại môn học/môđun lý thuyết</td>
+                                <td class="semester-col">300.000 đồng/môn học-môđun</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí học lại môn học/môđun thực hành</td>
+                                <td class="semester-col">500.000 đồng/môn học-môđun</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí xét tuyển</td>
+                                <td class="semester-col">60.000 đồng/hồ sơ</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi tốt nghiệp</td>
+                                <td class="semester-col">800.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi lại tốt nghiệp lý thuyết</td>
+                                <td class="semester-col">150.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi lại tốt nghiệp thực hành</td>
+                                <td class="semester-col">250.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col" rowspan="5">2</td>
+                                <td class="major-col" rowspan="5">Hệ sơ cấp</td>
+                                <td class="major-col">Lệ phí tuyển sinh hệ sơ cấp</td>
+                                <td class="semester-col">60.000 đồng/hồ sơ</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí xét tuyển</td>
+                                <td class="semester-col">60.000 đồng/hồ sơ</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi tốt nghiệp</td>
+                                <td class="semester-col">700.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi lại tốt nghiệp lý thuyết</td>
+                                <td class="semester-col">100.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Lệ phí thi lại tốt nghiệp thực hành</td>
+                                <td class="semester-col">200.000 đồng/học viên</td>
+                            </tr>
+                            <tr class="level-header">
+                                <td colspan="4">II. PHÍ</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">1</td>
+                                <td class="major-col">Phí nhập học (thủ tục nhập học, thẻ HV, khai giảng)</td>
+                                <td class="major-col">-</td>
+                                <td class="semester-col">200.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">2</td>
+                                <td class="major-col">Phí cấp bản sao bằng và bảng điểm khi tốt nghiệp</td>
+                                <td class="major-col">-</td>
+                                <td class="semester-col">100.000 đồng/học viên</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col">3</td>
+                                <td class="major-col">Phí phúc khảo điểm thi tốt nghiệp</td>
+                                <td class="major-col">-</td>
+                                <td class="semester-col">100.000 đồng/môn thi</td>
+                            </tr>
+                            <tr>
+                                <td class="number-col" rowspan="3">4</td>
+                                <td class="major-col" rowspan="3">Các khoản phí khác</td>
+                                <td class="major-col">Cấp lại bản sao bằng TN sau khi đã TN</td>
+                                <td class="semester-col">50.000 đồng/bản sao</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Cấp lại bản sao bảng điểm sau khi đã tốt nghiệp</td>
+                                <td class="semester-col">10.000 đồng/bản sao</td>
+                            </tr>
+                            <tr>
+                                <td class="major-col">Cấp lại thẻ học viên</td>
+                                <td class="semester-col">50.000 đồng/thẻ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tuition-section">
+                    <h4>Nơi nhận:</h4>
+                    <ul class="recipients-list">
+                        <li>Như điều 3 (để thực hiện)</li>
+                        <li>Hội đồng quản trị (để báo cáo)</li>
+                        <li>Ban Giám hiệu (để báo cáo)</li>
+                        <li>Lưu VT</li>
+                    </ul>
+                </div>
+
+                <div class="signature-section">
+                    <p><strong>HIỆU TRƯỞNG</strong></p>
+                    <p class="signature-name">Trần Hoàng Long</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh</h3>
+                    <div class="footer-contact">
+                        <p><strong>Địa chỉ:</strong> Ngõ 667 Đ. Lê Đại Hành, TT. Kỳ Anh, Thị xã Kỳ Anh, Hà Tĩnh</p>
+                        <p><strong>Điện thoại:</strong> 0965 995 135</p>
+                        <p><strong>Email:</strong> ttdnka@yahoo.co.uk</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Trường Trung Cấp Kỹ Thuật Tư Thục Kỳ Anh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
